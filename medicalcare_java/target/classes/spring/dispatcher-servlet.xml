@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- 添加注解驱动 -->
+	<annotation-driven />
+	<!-- 启用CGliB -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- 默认扫描的包路径 -->
+	<context:component-scan base-package="com.cmcc.medicalcare" />
+
+	<!-- 通过mvc:resources设置静态资源，这样servlet就会处理这些静态资源，而不通过控制器 -->
+	<!-- 设置不过滤内容，比如:css,jquery,img 等资源文件 -->
+	<resources location="/*.html" mapping="/**.html" />
+	<resources location="/css/*" mapping="/css/**" />
+	<resources location="/js/*" mapping="/js/**" />
+	<resources location="/images/*" mapping="/images/**" />
+
+	<beans:bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<beans:property name="messageConverters">
+			<beans:list>
+				<beans:ref bean="mappingJackson2HttpMessageConverter" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="mappingJackson2HttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<beans:property name="supportedMediaTypes">
+			<beans:list>
+				<beans:value>text/plain;charset=utf-8</beans:value>
+				<beans:value>text/html;charset=utf-8</beans:value>
+				<beans:value>text/json;charset=utf-8</beans:value>
+				<beans:value>application/json;charset=utf-8</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+
+
+	<!-- Tiles配置加载 -->
+	<beans:bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="viewClass">
+			<beans:value>org.springframework.web.servlet.view.tiles2.TilesView
+			</beans:value>
+		</beans:property>
+		<beans:property name="contentType">
+			<beans:value>text/html; charset=UTF-8</beans:value>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<beans:property name="definitions">
+			<beans:list>
+				<beans:value>/WEB-INF/tiles-defs.xml</beans:value>
+			</beans:list>
+		</beans:property>
+		<beans:property name="preparerFactoryClass"
+			value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory" />
+	</beans:bean>
+
+
+
+</beans:beans>

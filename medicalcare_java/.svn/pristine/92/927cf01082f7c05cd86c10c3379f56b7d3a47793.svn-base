@@ -1,0 +1,6 @@
+#ecop URL  service
+ecopUrl=http://120.197.89.216:8033/trymeecop/ecop.do 
+#ecopUrl=http://192.168.211.39/Ecop/ecop.do
+
+notCheckURL=/app/user/codeLogin.action;
+

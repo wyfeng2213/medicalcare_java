@@ -1,0 +1,9 @@
+#ecop URL  service
+ecopUrl=http://120.197.89.216:8033/trymeecop/ecop.do 
+#ecopUrl=http://192.168.211.39/Ecop/ecop.do
+
+notCheckURL=/app/user/codeLogin.action;/app/doctorsLoginInfo/sendCode.action;/app/doctorsLoginInfo/codeLogin.action;/app/patientLoginInfo/sendCode.action;\
+/app/patientLoginInfo/codeLogin.action;/app/patientUser/insert.action;/app/doctorsUser/insert.action;\
+/h5/patientLoginInfo/sendCode.action;/h5/patientLoginInfo/codeLogin.action;\
+/h5/patientUser/select.action;/h5/patientUser/insert.action
+

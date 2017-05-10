@@ -1,0 +1,12 @@
+#ORG_NAME = 1122161011178276
+#APP_NAME = testapp
+#GRANT_TYPE= client_credentials
+#CLIENT_ID = YXA6Irz_oI-GEead-FFvbfaMbQ
+#CLIENT_SECRET = YXA6VsR5JypETS3iPFvNNxYklmho0Vw
+
+
+ORG_NAME = 1140170421178546
+APP_NAME = mingyizaixian
+GRANT_TYPE= client_credentials
+CLIENT_ID = YXA6MzExMCY6EeexRVli4LysVg
+CLIENT_SECRET = YXA6c-2hbw5cy3KuybZs-A196a_9Y-s

@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0px; padding:0px; font-size:12px; font-family:Arial, Verdana, "宋体"; background:#f0f3f5; }
+img,a{ border:0px;}
+/**头部样式**/
+.topcon{ height:81px; border-bottom:solid 5px #579dd2; background:#fff;}
+.topleft{ float:left; padding-top:10px; padding-left:10px; }
+.topleft img{display:block; }
+.topright{ float:right;  padding-right:10px; padding-top:26px; text-align:right; width:180px;}
+.topright a{ color:#007bc7; display:block; float:left; margin-left:7px;  height:28px; line-height:28px; font-size:14px; text-decoration:underline;}
+.loginout,.editpassword{ background:url(../images/icon.gif) no-repeat;}
+.loginout{ background-position:0px 0px; width:50px; padding-left:10px; display:block; float:left;}
+.editpassword{background-position:0px -38px; width:76px; padding-left:8px; display:block; float:left;}
+/**导航样式**/
+.menubg{ background:url(../images/vavbg.gif) repeat-x left top; height:33px; padding-left:15px; padding-top:10px;}
+.menubg a{display:block; float:left; margin-right:30px; height:26px; line-height:26px; color:#b3b3b3; font-weight:bold; font-size:14px; text-decoration:none;}
+.menubg a.blacka{ color:#000000;}
+.navbg{background:url(../images/vavbg2.gif) repeat-x left top; height:46px;}
+.dangqian{ background:url(../images/current.gif) no-repeat; width:117px; height:35px; padding-top:10px;  text-align:center; float:left; margin-left:15px;}
+.dangqianr{  text-align:right;  float:right; padding-right:20px; padding-top:8px; vertical-align:middle;}
+
+.dangqianr input{ display:block; float:left; height:26px; line-height:26px; color:#a6a6a6; border:0px; background:url(../images/input_bg.gif) repeat-x top left; margin-top:2px; margin-right:3px; width:200px;}
+.dangqianr input.border3{ border-left:1px #c3c4c4 solid; border-right:1px #c3c4c4 solid; border-bottom:1px #c3c4c4 solid; }
+.dangqianr select{ display:block; line-height:26px; height:26px; float:left;  margin-right:2px; margin-top:4px;}
+/**表格样式**/
+.listcon{ padding:26px 20px 10px 20px; }
+.listcon table{width:100%; border-collapse:collapse; border:solid 1px #57a2d1; font-size:14px; text-align:center;}
+.listcon table th{ background:url(../images/tab_thbg.gif) repeat-x left bottom; border-bottom:solid 1px #57a2d1; height:26px; line-height:26px; color:#255f8a; font-weight:bold; }
+.listcon table td{ border-bottom:solid 1px #57a2d1;  height:26px; line-height:26px; background:#fff; color:#333333;}
+.listcon table tr.otherbgcolor td{ background:#f2f7f9;}
+.listcon table td.tdcolor{ border-right:solid 1px #57a2d1; padding:5px 3px;}
+.listcon table td a{ color:#0066cc; text-decoration:underline;}
+.listcon table td a:hover{ color:#373738;}
+.newinput{  height:20px; line-height:20px;}
+/**翻页样式**/
+.turnpage{  height:24px; width:100%;}
+.turnfr{ float:right; padding-right:20px;  }
+.turnpage a{ display:block; background:url(../images/turnpage_default.gif) no-repeat; width:30px; height:24px; line-height:26px; text-align:center; text-decoration:none; color:#666666; font-weight:bold; float:left; margin-left:3px; float:left;}
+.turnpage a:hover{ background:url(../images/turnpage_over.gif) no-repeat; color:#fff; font-weight:bold; }
+.turnpage a.pagedisalbe{display:block; background:url(../images/turnpage_disable.gif) no-repeat; float:left;}
+.turnpage a.danqian{ background:url(../images/turnpage_over.gif) no-repeat; color:#fff; font-weight:bold; float:left;}
+.turnpage span{ display:block; width:30px; height:24px; line-height:26px; float:left;  background:url(../images/turnpage_over.gif) no-repeat;  color:#fff; font-weight:bold; text-align:center; margin-left:3px; float:left;}
+.turnpage label{display:block; float:left; padding-left:8px;  height:26px; line-height:26px; }
+.turnpage label input{ width:40px; border:solid 1px #57a2d1; height:20px; line-height:22px;_height:17px; _line-height:20px; color:#57a2d1; text-align:center; float:left;}
+.zhongshu{ height:26px; line-height:26px; padding-right:10px; font-family:Verdana, "宋体"; display:table-cell; float:right;}
+.zhongshu b{ color:#33F; font-weight:bold; font-size:12px; padding:0px 7px;}
+/**add pushserver**/
+.addtitle{ font-size:14px; font-weight:bold; padding-bottom:7px;}
+.addbtn{ text-align:center; margin-top:7px;}
+.addbtn a{ margin:0 3px; text-decoration:none; background:#309; padding:6px 20px; display:inline-block; background:url(../images/btn_bottombg.gif) no-repeat left center; width:65px; height:24px; line-height:24px; font-weight:bold; color:#333333; font-size:14px; }
+.addbtn a:hover{ background:url(../images/btn_bottombg2.gif) no-repeat left center;}
+/*****连接策略*********/
+.lianjiecon{ border: solid 1px #57a2d1; background:#fff; padding:30px 80px; font-size:14px; font-weight:bold;  }
+.lianjiecon div{ margin-bottom:15px; line-height:26px; width:100%; display:block;}/*0827*/
+.lianjiecon div a{ cursor:pointer;}/*0827*/
+.lianjiecon span{ color:#58bd07; font-weight:normal; padding-left:20px;}
+.lianjiecon span.blackspan{ color:#000;}
+.lianjiecon span.blackspan input{ color:#7f7f7f;}
+
+.shenhetab{ padding-left:15px;}
+.shenhetabtil{font-size:14px; font-weight:bold; padding-bottom:7px; width:400px;}
+
+/*************修改密码 弹窗******************/
+.tanchen {	position: absolute;	width: 500px;	height: 336px;	z-index: 201;	left: 392px;	top: 180px;	display: none;}
+.tongzhichen {	position: absolute;	width: 800px;	height: 500px;	z-index: 201;	left: 225px;	top: 45px;	display: none;}
+.zhizhao { z-index:200; left:0px; width:100%; position:absolute; height:100%; background: #000; display:none;
+filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.poptop{ width:100%; height:34px; background:url(../images/pop_top_r.png) no-repeat right top;}
+.poptop2{ height:34px; background:url(../images/pop_top_l.png) no-repeat left top; }
+.poptop3{height:34px; background:url(../images/pop_top_c.gif) repeat-x 0px 0px; margin-right:13px; margin-left:8px; padding-left:10px; color:#fff; font-size:14px; font-weight:bold; line-height:35px; }
+.poptop3 span{ float:right;}
+.poptop3 label{ float:left;}
+
+.popcenter{ width:100%; background:url(../images/pop_center_r.png) repeat-y right top;}/*
+.popcenter2{ background:url(../images/pop_center_l.png) repeat-y left top #fff; margin-right:13px; padding:25px 20px; }*/
+.popcenter2{ background:url(../images/pop_center_l.png) repeat-y left top; margin-right:13px;  }/*0815*/
+.popcenterfff{background:#fff;  padding:25px 10px; margin-left:4px;}/*0815*/
+.popcenter2 table{ margin:0px auto; border-collapse:collapse;}
+.popcenter2 table td{ padding:3px 0px; line-height:28px; }
+.popcenter2 table td span{ color:#d76d17; font-family: "宋体"; padding-right:5px; font-weight:normal;  }
+.popcenter2 table td.textbold{ font-weight:bold; font-size:14px; color:#333333;  }
+.youkang{ background:url(../images/input_addbg.gif) repeat-x left top; border:solid 1px #1685e0;  width:100%; padding:3px 2px; }
+.nokang{ border:solid 1px #afafaf; width:100%; padding:3px 2px;}
+.popcenter2 table td input.put{ border:solid 1px #7bb9df; height:24px; background:url(../images/input_bg.gif) repeat-x 0px -1px; margin:5px 0px;}
+
+.popbottom{ width:100%; background:url(../images/pop_bottom_r.png) no-repeat right top; height:71px;}
+.popbottom2{ width:100%; background:url(../images/pop_bottom_l.png) no-repeat left top; height:71px;}
+.popbottom3{ background:url(../images/pop_bottom_c.png) repeat-x; margin:0 13px 0px 8px; height:61px; padding-top:10px; text-align:center;}
+.popbottom3 img{ margin:8px 4px auto 4px;}
+.popbottom3 a{ margin:0 3px; text-decoration:none; background:#309; padding:6px 20px; display:inline-block; background:url(../images/btn_bottombg.gif) no-repeat left center; width:65px; height:24px; line-height:24px; font-weight:bold; color:#333333; font-size:14px; }
+.popbottom3 a:hover{ background:url(../images/btn_bottombg2.gif) no-repeat left center;}
+
+/*login css*/
+.loginbgc{ background:#fff; }
+.logintop{ background:url(../images/login_topbg.gif) repeat-x left top; height:30px;}
+.logintop label{ float:right; display:block; text-align:right; height:30px; line-height:30px; margin-right:35px; color:#667799;}
+.logintop label a{ text-decoration:none; margin:0px 7px; color:#667799;}
+.loginlogo{ width:952px; margin:0 auto;}
+.loginlogo img{ margin-top:14px; margin-bottom:15px;}
+.logincon{ background:url(../images/loginbg.jpg) no-repeat; width:350px; height:262px; margin:0 auto; padding-top:130px; padding-left:600px;}
+.logintable{ color:#1a1a1a; font-size:14px;}
+.logininput{ background:url(../images/login_inputbg.jpg) repeat-x top left; height:30px; line-height:30px; border:solid 1px #c4c4c4; width:190px; padding:0 5px;}
+.loginbotm{  width:950px; margin:0 auto; margin-top:20px; border-top:solid 1px #d4d4d4; height:40px; text-align:center; color:#9e9e9e;}
+.loginbotm p{ margin:0px; padding:0px; line-height:40px;}
+.loginbotm p a{ color:#9e9e9e; text-decoration:none;}

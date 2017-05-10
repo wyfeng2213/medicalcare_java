@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd   
+	http://www.springframework.org/schema/tx   
+	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd   
+	http://www.springframework.org/schema/context   
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd   
+	http://www.springframework.org/schema/util    
+	http://www.springframework.org/schema/util/spring-util-4.1.xsd   
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd 
+	http://www.springframework.org/schema/cache    
+	http://www.springframework.org/schema/cache/spring-cache.xsd">
+	
+	<context:component-scan base-package="com.cmcc.medicalcare">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="order" value="2" />   
+        <property name="ignoreUnresolvablePlaceholders" value="true" /> 
+		<property name="locations">
+		<list>
+			<value>classpath:config/jdbc.properties</value>
+            <value>classpath:config/redis.properties</value>
+        </list>
+		</property>
+	</bean>
+    
+	<!-- javamelody begin -->	
+	<bean id="facadeMonitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">
+		<property name="pointcut">
+			<bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+				<property name="patterns">
+					<list>
+						 <value>com.mids.service..*.*</value>
+						 <value>com.mids.controller.*</value>
+						 <value>com.mids.servlet3..*.*</value>
+						 <!--<value>com.mids.quartz..*.*</value>-->
+					</list>
+				</property>
+				<property name="excludedPattern" value=".*Run.*" />
+			</bean>
+		</property>
+	</bean>
+	<!--文件上传-->
+    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="uft-8" />
+        <property name="maxUploadSize" value="52428800"/>
+    </bean>
+</beans>	

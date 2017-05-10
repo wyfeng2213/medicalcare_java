@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+body{ width:100%;  
+      margin:0; 
+	  padding:0; 
+	  border:none;
+	  background-color:#f5f5f5;}
+*{ font-family: "微软雅黑";}
+img{border: none; outline:none; }
+input{ border:none;}
+.nav_box{width:100%;
+         height:100px;
+		 background-color:#1c4565;
+		 overflow:hidden;
+		 margin:auto;}
+.nav_box a{ color:#cccccc; display:block;}
+.left_box .current{ color:#ffffff; }
+.left_box{ float:left;
+           overflow:hidden;
+           font-size:16px;
+		   line-height:100px;
+		   margin-left:74px;}
+.left_box a{ margin-right:40px; float:left;
+             background-repeat:no-repeat; }
+.right_box{ float:right; overflow:hidden; width:20%; }
+.right_box img{ width:40px; float:left; margin-top:9.6%;}
+.right_box input{ width:210px;
+                  height:32px;
+				  border-radius:4px;
+				  background-image:url(img/search.png);
+				  background-repeat:no-repeat;
+				  background-size:8%;
+				  background-position:4% 50%;
+				  padding-left:12%;
+				  margin-top:10%;
+				  float:left;
+				  margin-right:20px;}
+.current_box {width:100%;
+              height:1px;
+              background-color: #f5f5f5;
+              box-shadow: 0px -4px 8px 0px #000000;
+              z-index: 21;}
+.list_box{ border-collapse:collapse;
+           width:90%;
+		   margin:auto;
+		   text-align:center;
+		   margin-top:40px;
+		   border:solid 2px #d6d6d6; }
+.title td{ background-color:#01a0d0;
+           color:#ffffff;
+		   background-repeat:no-repeat;
+		   background-position:right;
+		   line-height:40px;
+		   font-size:16px;
+		   }
+.contene_box1,.contene_box2{ font-size:14px;
+			                 line-height:40px;
+							 color:#333333;
+							 }
+.contene_box1 td,.contene_box2 td{ border:solid 1px #e5e5e5; }
+
+
+@media screen and (max-width: 1281px){
+	.right_box{ width:30%; margin-right:4%; }
+
+}
+@media screen and (min-width:1281px) and (max-width: 1600px){
+	.right_box{ width:25%; }
+	
+}
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+	
+
+
+}
+

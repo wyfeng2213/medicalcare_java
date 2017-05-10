@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    
+     <!-- 标准版页面模板配置  -->
+    <definition name="standard" template="/tilesLayout/tpl-StandardLayout.jsp">
+        <put-attribute name="content" value=""/>
+    </definition>
+    
+    
+    
+    <!-- 真实的每个页面，继承全局模板mainLayout的页面布局 -->
+    <!-- 可以使用通配符，不必每个页面都写一个配置 -->
+    <definition name="*::*" extends="{1}">
+        <put-attribute name="content" value="/{2}.jsp"/>
+    </definition>
+
+  
+</tiles-definitions>

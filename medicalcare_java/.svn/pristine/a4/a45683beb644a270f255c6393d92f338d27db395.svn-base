@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>	
+
+	<!-- 实体类上使用了注解@Alias，这里必须配置实体所在的根package -->
+	<typeAliases>
+  		<package name="com.cmcc.medicalcare.model" />
+ 	</typeAliases>
+	<plugins> 
+		<plugin interceptor="com.cmcc.medicalcare.inter.PagableInterceptor">
+		<property name="dialect" value="Mysql"/>
+		</plugin>
+ 	</plugins> 
+	<!-- 具体的mapper配置文件 -->
+	<mappers>	
+	     <mapper resource="com/cmcc/medicalcare/mappers/LogMapper.xml" /> 
+	</mappers>
+	
+</configuration>

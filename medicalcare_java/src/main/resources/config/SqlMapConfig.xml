@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- 实体类上使用了注解@Alias，这里必须配置实体所在的根package -->
+	<typeAliases>
+		<package name="com.cmcc.medicalcare.model" />
+	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.cmcc.medicalcare.inter.PagableInterceptor">
+			<property name="dialect" value="Mysql" />
+		</plugin>
+	</plugins>
+	<!-- 具体的mapper配置文件 -->
+	<mappers>
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsFollowupPlanMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsFollowupPlanPointMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsFollowupPlanPointTemplateMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsFollowupPlanTemplateMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsInterrogationMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsInterrogationQuestionMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsInterrogationQuestionTemplateMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsInterrogationTemplateMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsLoginInfoMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsPackageMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsPatientLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsSecretaryLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsTeamInviteMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsTeamMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsTeamUserLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/DoctorsUserMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/GroupDoctorsPatientLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/GroupDoctorsPatientMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/MessageGroupLogMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/MessageLogMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientAppointmentMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientBloodPressureMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientDoctorsLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientInvitationMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientLoginInfoMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientMedicalRecordMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientPackageMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientReferralMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientSecretaryLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PatientUserMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/PolularScienceMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/RequestLogMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/SecretaryDoctorsLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/SecretaryLoginInfoMapper" />
+		<mapper resource="com/cmcc/medicalcare/mappers/SecretaryPatientLinkMapper.xml" />
+		<mapper resource="com/cmcc/medicalcare/mappers/SecretaryUserMapper.xml" />
+	</mappers>
+
+</configuration>
