@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>填写个人信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link href="css/FamilyDoctor.css" rel="stylesheet" />
+    <script src="js/fontSize.js"></script>
+</head>
+<body>
+    <div class="history">
+        <i onclick="window.history.back()"><</i>
+        <p>签约家庭医生</p>
+    </div>
+    <div class="content-warp">
+        <div class="item">
+            <h3 class="title">
+                家庭医生团队介绍
+            </h3>
+            <div class="item-content">
+
+            </div>
+            <h3 class="title">
+                钟南山团队
+            </h3>
+            <p>
+                签约期限为一年，到期后自动续费。你可根据需求更改或取消。签约期限为一年，到期后自动续费。你可根据需求更改或取消。签约期限为一年，到期后自动续费。
+                你可根据需求更改或取消。签约期限为一年，到期后自动续费。你可根据需求更改或取消。
+            </p>
+        </div>
+        <div class="item">
+            <h3>家庭医生服务内容</h3>
+            <dl>
+                <dt>签约后，您将享受已下服务</dt>
+                <dd>(1)签约期限为一年，到期后自动续费。你可根据需求更改或取消。</dd>
+                <dd>(2)签约期限为一年，到期后自动续费。你可根据需求更改或取消。签约期限为一年，到期后自动续费。你可根据需求更改或取消。</dd>
+                <dd>(3)签约期限为一年，到期后自动续费。你可根据需求更改或取消。</dd>
+                <dd>(4)标题交给</dd>
+            </dl>
+            <div class="tip">
+                签约期限为一年，到期后自动续费。你可根据需求更改或取消。
+            </div> 
+        </div>
+        <div class="item">
+            <h3>签约费用</h3>
+            <div class="tip">
+                签约期限为一年，到期后自动续费。你可根据需求更改或取消。
+            </div>
+        </div> 
+    </div>
+    <div class="apply-success">
+        <i>✔</i>
+        <span>我已阅读并同意<a>《家庭医生签约服务协议》</a></span>
+    </div>
+    <button type="button" class="ellipse btn-apply">立即签约</button>
+    <script type="text/javascript">
+	var doctorsLoginId = getQueryString('doctorsLoginId');
+	var doctorType = getQueryString('doctorType');
+	//alert(doctorsLoginId);	
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null)
+			return unescape(r[2]);
+		return null;
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{background:#eef1f3;}
+.icon-pic{margin-left: 37px;vertical-align: -12px;height: 35px;}
+#denglu input{box-sizing:content-box;}    
+#denglu .login-text,#denglu .form li,.mession_yanzheng{color:#aaa;}
+.w630{width:630px;}
+#denglu h1{color:#007cff;text-align:center;}
+.top-tilte p{text-align:center;margin-bottom:16px;font-size:18px}
+#denglu .form{background:#fff;border-radius:20px;}
+#denglu  .form-nav{line-height:40px;padding-top:1px;background:#eee;}
+#denglu  .form-nav ul{overflow:hidden;}
+#denglu .form li{float:left;font-size:16px;text-align:center;width:50%;font-weight:600;    border-radius: 20px 20px 0 0;}
+#denglu .form li.active{color:#007cff;background:#fff;}
+#denglu .form form{margin:0 40px;background:#fff;overflow:hidden;border-radius:0 20px 0 0;}
+#denglu .field { margin-top: 30px;position: relative;}
+#denglu .field .ph-label {position: absolute;line-height: 42px;height: 42px;color: #999; opacity: 1;left: 15px;top: 0;font-size: 14px;z-index:99}
+#denglu .login-text{ width: 515px;font-size: 14px; z-index:99;   cursor: pointer;line-height: 18px; height: 18px; padding: 11px 15px;border-radius:20px;border:none;box-shadow: 0px 0px 7px #ccc;    margin-left: 3px;}
+#denglu .login-text-1,.mession_yanzheng{width:46%;}
+#denglu  .login-links{text-align:center;margin-top:30px;padding-bottom:20px;}
+#denglu  .login-links button{width:100%;margin:0 auto;background:rgb(61, 147, 236);color:#fff;font-size:16px;font-weight:600;line-height:40px;border:0;border-radius:20px;margin-bottom:5px;}
+#denglu  .login-links a{color:#aaa;margin-top:5px;}
+.mession_yanzheng{float:right;color:#fff;background:rgb(61, 147, 236);text-align:center;line-height: 42px;height: 42px;border-radius:20px;border:none}

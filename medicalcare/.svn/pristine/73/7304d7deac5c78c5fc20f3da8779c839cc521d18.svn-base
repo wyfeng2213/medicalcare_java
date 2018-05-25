@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="/Content/css/reset.css">
+    <link rel="stylesheet" href="/Content/css/main.css">
+    <link rel="stylesheet" href="/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/css/model.css">
+    <style>
+        .face {
+            margin-top: 4px;
+            background: #fff;
+            padding: 2px;
+            border: 1px #dfe6f6 solid;
+            width: 300px;
+        }
+
+        .face {
+            padding: 0px;
+        }
+
+            .face img {
+                cursor: pointer;
+                border: 1px #fff solid;
+                display: inline-block;
+                margin: 2px 2px;
+            }
+
+                .face img:hover {
+                    border: 1px #0066cc solid;
+                }
+    </style>
+    <script src="../../Content/js/jq.js"></script>
+</head>
+<body>
+    <div class="header width">
+        <div class="le logo-color">
+        </div>
+        <div class="header-right q ">
+            <ul class=" header-nav le">
+                <li class="active"><a href="">在线问诊</a></li>
+                <li><a href="预约提醒.html">预约申请</a></li>
+                <li><a href="">医生服务</a></li>
+                <li><a href="用户管理.html">患者管理</a></li>
+            </ul>
+            <div class="user-operation le">
+                <div class="user">
+                    <span>欢迎你,&nbsp<span class="user-name">李福军<i class="icon-angle-down"></i></span></span>
+                </div>
+                <a href="" class="close-out"><i class=" icon-off"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="content-3 width conheight">
+        <div class="le warp3-left chat-nav">
+            <div class="title">问诊消息</div>
+            <div class="chat-nav-list scrollbar">
+                <div class="chat-item active">
+                    <div class="user-img le">
+                        <img src="../../Content/images/people.jpg" alt="">
+                    </div>
+                    <div class="item-show le">
+                        <p>谢玉成</p>
+                        <div>胸外科</div>
+                        <div>谢谢</div>
+                    </div>
+                </div>
+                <div class="chat-item ">
+                    <div class="user-img le">
+                        <img src="../../Content/images/people.jpg" alt="">
+                    </div>
+                    <div class="item-show le">
+                        <p>谢玉成</p>
+                        <div>胸外科</div>
+                        <div>谢谢</div>
+                    </div>
+                </div>
+                <div class="chat-item ">
+                    <div class="user-img le">
+                        <img src="../../Content/images/people.jpg" alt="">
+                    </div>
+                    <div class="item-show le">
+                        <p>谢玉成</p>
+                        <div>胸外科</div>
+                        <div>谢谢</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warp3-right">
+            <div class="chat-content-le le">
+                <div class="chat-content-show-area" style="display:block">
+                    <div class="title">
+                        <span class="doctor">李福军</span>
+                        <p>责任医生:<span>李福军医生</span></p>
+                    </div>
+                    <div class="take-content">
+                        <div class="take-content-area scrollbar">
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content-show-area">
+                    <div class="title">
+                        <span class="doctor">张福军</span>
+                        <p>责任医生:<span>张福军医生</span></p>
+                    </div>
+                    <div class="take-content">
+                        <div class="more-load" align="center" style="padding-top:10px;color:#aaa">加载更多</div>
+                        <div class="take-content-area scrollbar">
+                            <div class="take-time" align="center" style="color:#aaa">2017-08-12</div>
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content-show-area">
+                    <div class="title">
+                        <span class="doctor">谢成云</span>
+                        <p>责任医生:<span>王福军医生</span></p>
+                    </div>
+                    <div class="take-content">
+                        <div class="take-content-area scrollbar">
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="answer-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-left"></span>医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                    医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                            <div class="ask-question ss">
+                                <img src="../../Content/images/people.jpg" alt="">
+                                <p>
+                                    <span class="span-right"></span>医生你好上次疗效不错，这次我想咨询一下
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="take-content-box">
+                    <div class="take-tool">
+                        <span><i class=" icon-picture"></i>图片/文件</span>
+                        <span><i class="web_wechat_face "></i>表情</span>
+                        <span class="ri"><i></i>咨询记录</span>
+                    </div>
+                    <div style="position: absolute; z-index: 1000; bottom: 210px; left: 0px;display:none" class="face">
+                    </div>
+                    <textarea class="srcollbar">请介绍一下你自己</textarea>
+                    <span class="take-send">发送</span>
+                </div>
+            </div>
+            <div class="chat-content-ri information le">
+                <div class="margin-l10">
+                    <div class="information-1">
+                        <div class="title">
+                            <span>医生信息</span>
+                        </div>
+                        <div class="information-1-show scrollbar">
+                            <div class="information-item padding-l16 doctor-information">
+                                <div class="sre">
+                                    <p class="p1">所在科室:</p>
+                                    <p class="p2">广州一院胸外科</p>
+                                </div>
+                            </div>
+                            <div class="information-item doctor-information padding-l16">
+                                <div class="sre">
+                                    <p class="p1">所在科室:</p>
+                                    <p class="p2">广州一院胸外科</p>
+                                </div>
+                            </div>
+                            <div class="information-item doctor-information padding-l16">
+                                <div class="sre ">
+                                    <p class="p1">所在集团:</p>
+                                    <p class="p2">何建平集团</p>
+                                </div>
+                            </div>
+                            <div class="information-item doctor-information padding-l16">
+                                <div class="sre ">
+                                    <p class="p1">联系电话:</p>
+                                    <p class="p2">085545744</p>
+                                </div>
+                            </div>
+                            <div class="information-item doctor-information padding-l16">
+                                <div class="sre ">
+                                    <p class="p1">联系电话:</p>
+                                    <p class="p2">085545744</p>
+                                </div>
+                            </div>
+                            <div class="information-item doctor-information padding-l16">
+                                <div class="sre ">
+                                    <p class="p1">联系电话:</p>
+                                    <p class="p2">085545744</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information-2">
+                        <div class="title caozuo">
+                            <span>常用操作</span>
+                        </div>
+                        <ul class="operation scrollbar">
+                            <li>
+                                <div data="转交医生处理.html">
+                                    <i class=" icon-th-list"></i>
+                                    <p>转交医生处理</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class=" icon-th-list"></i>
+                                    <p>转交医生处理</p>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div data="转交医生处理.html">
+                                    <i class=" icon-th-list"></i>
+                                    <p>转交医生处理</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div data="添加问诊记录.html">
+                                    <i class=" icon-th-list"></i>
+                                    <p>添加问诊记录</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="information-3">
+                        <div class="title caozuo">
+                            <span>常用语</span>
+                            <span class="color-blue">添加</span>
+                        </div>
+                        <div class="padding-l16 scrollbar">
+                            <div class="item">额热很热哦副科级和哦I好人</div>
+                            <div class="item">额热很热哦副科级和哦I好人</div>
+                            <div class="item">额热很热哦副科级和哦I好人</div>
+                            <div class="item">额热很热哦副科级和哦I好人</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="model-body" >
+        <div class="model"></div>
+        <div class="model-warp">
+
+        </div>
+     </div>-->
+    <iframe src="" name="iframe_text" frameborder="0" style="width: 100%; height: 100%;position: fixed;top: 0; left: 0;display:none"></iframe>
+    <script rel="stylesheet" href="../../Content/js/jq.js"></script>
+    <script type="text/javascript">
+        $(".chat-item ").click(function () {
+            $(".chat-item ").removeClass("active");
+            $(this).addClass("active")
+            var index = $(this).index()
+            $(".chat-content-show-area").css({ "display": "none" });
+            $(".chat-content-show-area").eq(index).css({ "display": "block" })
+            console.log($(this).index())
+        });
+
+        $(".operation li").click(function () {
+            var data = $(this).find("div").attr("data");
+            $("iframe").css("display", "block")
+            $("iframe").attr("src", data)
+        })
+
+        for (var i = 1; i <= 75; i++) {
+
+            $(".face").append('<img src="../../Content/face/' + i + '.gif">')
+
+        };
+        //调用表情窗口    关闭表情窗口
+        $(".web_wechat_face ").click(function () {
+            $(".face").fadeToggle(300)
+
+        })
+        $(".face img").click(function () {
+            $(".face").fadeOut(600);
+
+            var clone = $(this).clone(true)
+            var src = $(this).attr("src")
+
+            $('.take-content-area').append('<div class="answer-question ss">'
+                + '<img src="../../Content/images/people.jpg" alt="">'
+                + '<p><span class="span-left"></span>' + '<img src="' + src + '">' + '</p></div>')
+        })
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="header width">
+		<div class="le logo-color">
+		</div>
+		<div class="header-right q ">
+			<ul class=" header-nav le">
+				<li ><a href="index.html">在线问诊</a></li>
+                <li><a href="ysfw.html">医生服务</a></li>
+				<li><a href="">预约申请</a></li>
+				<li><a href="">患者管理</a></li>
+			</ul>
+			<div class="user-operation le">
+				<div class="user">
+					<span>欢迎你,&nbsp<span class="user-name">李福军<i class="icon-angle-down"></i></span></span>
+				</div>
+				<a href="" class="close-out"><i class=" icon-off"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="remind content-2 width">
+		<div class="warp">
+		 	<div class="remind-nav">
+		 		<ul class="q">
+		 			<li class="active"><a href="">今日日程提醒</a></li>
+		 			<li ><a href="新增预约.html">新增预约</a></li>
+		 		</ul>
+		 		</ul>
+		 	</div>
+		 	<div class="form">
+		 		<div class="p">
+		 			<p class="p1 le">即将开始</p>
+		 		    <p class="ri">门诊预约<span>7</span>电话预约<span>8</span></p>
+		 		</div>
+		 		<table width="100%">
+		 			<thead>
+		 				<tr>
+							<th>时间段</th>
+							<th>预约人</th>
+							<th>预约医生</th>
+							<th>预约类型</th>
+							<th>患者留言</th>
+							<th>状态提醒</th>
+							<th>提醒</th>
+						</tr>
+		 			</thead>
+		 			<tbody>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 			</tbody>
+		 			
+		 		</table>
+		 	</div>
+		 	<div class="form">
+		 		<div class="p">
+		 			<p class="p1 le">今日已结束</p>
+		 		</div>
+		 		<table width="100%">
+		 			<thead>
+		 				<tr>
+							<th>时间段</th>
+							<th>预约人</th>
+							<th>预约医生</th>
+							<th>预约类型</th>
+							<th>患者留言</th>
+							<th>状态提醒</th>
+							<th>提醒</th>
+						</tr>
+		 			</thead>
+		 			<tbody>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>2019-05-05 12:22</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>谭倩倩<br>1345858585</td>
+		 					<td>电话预约</td>
+		 					<td>这里是患者的留言，希望处理留言</td>
+		 					<td>已提醒</td>
+		 					<td><span>提醒</span></td>
+		 				</tr>
+		 			</tbody>
+		 			
+		 		</table>
+		 	</div>
+		 	
+		</div>
+	</div>
+
+</body>
+</html>

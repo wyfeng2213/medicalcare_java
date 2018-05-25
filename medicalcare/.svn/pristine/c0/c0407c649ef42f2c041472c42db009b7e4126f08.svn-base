@@ -1,0 +1,109 @@
+package com.cmcc.medicalcare.controller.sys;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cmcc.medicalcare.annotation.SystemControllerLog;
+import com.cmcc.medicalcare.controller.BaseController;
+import com.cmcc.medicalcare.inter.Pager;
+import com.cmcc.medicalcare.model.InquiryMessageLog;
+import com.cmcc.medicalcare.service.IInquiryMessageLogService;
+import com.cmcc.medicalcare.service.IMediaLogService;
+import com.cmcc.medicalcare.service.IScienceArticleService;
+import com.cmcc.medicalcare.service.IScienceColumnService;
+
+/**
+ * 
+ * 
+ *
+ */
+@Controller
+@RequestMapping("/sys/inquiryLog")
+public class SystemInquiryLogController extends BaseController {
+
+	@Resource
+	private IScienceColumnService scienceColumnService;
+
+	@Resource
+	private IScienceArticleService scienceArticleService;
+	
+	@Resource
+	private IMediaLogService mediaLogService;
+	
+	@Resource
+	private IInquiryMessageLogService inquiryLogService;
+
+	/**
+	 * 用户管理页
+	 *
+	 * @return
+	 */
+	@SystemControllerLog(description = "管理页面")
+	@RequestMapping(value = "/manager", method = RequestMethod.GET)
+	public String manager(Model model) {
+		return "/sys/log/inquiryLog";
+	}
+
+	/**
+	 * 用户管理页
+	 *
+	 * @return
+	 */
+	@RequestMapping(value = "/findPage")
+	@ResponseBody
+	@SystemControllerLog(description = "查找问诊日志")
+	public Map<String, Object> findPage(HttpServletResponse response, String userName, String userPhone,
+			@RequestParam(value = "page", defaultValue = "1") Long page,
+			@RequestParam(value = "rows", defaultValue = "10") Long rows) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+
+		try {
+			if(StringUtils.isNotBlank(userName)){
+				userName = java.net.URLDecoder.decode(userName, "UTF-8");// java : 字符解码
+			}
+			if(StringUtils.isNotBlank(userPhone)){
+				userPhone = java.net.URLDecoder.decode(userPhone, "UTF-8");// java : 字符解码
+			}
+			
+			paramMap.put("name", userName);
+			paramMap.put("phone", userPhone);
+			Pager<InquiryMessageLog> inquiryLogPage = inquiryLogService.getList("findInquiryLogPage", 
+					getPageIndex(page), getPageSize(rows), paramMap);
+			map.put("total", inquiryLogPage.getTotalCount());
+			map.put("rows", inquiryLogPage.getList());
+		} catch (Exception e) {
+			e.printStackTrace();
+			map.put("total", 0);
+			map.put("rows", "");
+		}
+
+		return map;
+	}
+
+	/**
+	 * 
+	 * @Title: queryPage @Description: TODO @param @param model @param @param
+	 *         id @param @return 设定文件 @return String 返回类型 @throws
+	 */
+	@SystemControllerLog(description = "问诊日志详情页面")
+	@RequestMapping(value = "/queryPage", method = RequestMethod.GET)
+	public String queryPage(Model model, int id) {
+		InquiryMessageLog inquiryLog = inquiryLogService.findById("selectByPrimaryKey", id);
+		model.addAttribute("inquiryLog", inquiryLog);
+		return "/sys/log/inquiryLogQuery";
+	}
+
+	
+}

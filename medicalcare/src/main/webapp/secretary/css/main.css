@@ -1,0 +1,218 @@
+@media screen and (max-width: 1200px){.width{width:990px;}}
+@media screen and (min-width: 1200px){.width{width:85%;} .header-right .header-nav li a{font-size:16px}}
+.width{margin:auto;}
+.body {height: 100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+html,body{height:100%}
+.color-blue{ color:#0087ff;    cursor: pointer;}
+a{color:#333;}
+body{background:#f0f4f8;}
+.hidden{display:none}
+span.blue-sapn:hover,.dias .form .title div span:hover,.last-td span:hover,.content-main-warp .sed>ul li:last-child span:hover,.content-main-warp .btn-group1 span:hover {
+    background: #027fef;
+    color: #fff;
+}
+.hide{display:none}
+
+/*头部公共样式*/
+.header .logo-color{
+	width:240px;background: #0087ff;height:80px;
+}
+.header{border-radius:10px 10px 0 0;overflow:hidden;background:#FFF;}
+.header-right{margin-left:250px;}
+.header-right .header-nav{width: -webkit-calc( 100% - 245px );width: -moz-calc( 100% - 245px );width: calc( 100% - 245px );}
+.header-right .header-nav li{width:25%;line-height:80px;text-align:center;font-size:14px;float:left;}
+.header-right .header-nav li.active{background:#0087ff;}
+
+.header-right .header-nav li.active a{ color: #fff; font-weight: 600;}
+.header-right .header-nav li a{width:100%;height:100%;display:inline-block;}
+.header-right .user-operation{    width:230px;float: right;text-align: center;}
+.header-right .user-operation .user {border-radius: 16px; text-align: center;display: inline-block; border: 1px solid #eee;line-height: 25px; margin-top: 28px; font-size: 14px; padding: 2px 9px;
+}
+.header-right .user-operation .user i{padding:0 6px;font-size:20px;color:#0087ff;font-weight:700;}
+.close-out i{color:#0087ff;margin-left:10px;font-size:18px;}
+/*预约提醒内容  ---今日日程提醒*/
+.content-2 .warp{padding:35px 15px;background:#f3f6f9;}
+.content-2 .remind-nav{margin-bottom:16px;}
+.content-2 .remind-nav li{float:left;padding:4px 10px;color:#aaa;margin-right:10px;}
+.content-2 .remind-nav li.active{border:1px solid #eee;border-radius:16px;-webkit-border-radius:16px;color:#666;background: #fff;box-shadow:0 0 2px #a5a3a3;}
+/*.form*/
+.disa-nav-bottom span:hover {
+    background: #027fef;
+    color: #fff;
+}
+.remind .form {border-radius:16px;-webkit-border-radius:16px;overflow:hidden;}
+.remind .form{margin-bottom:20px;}
+.remind .form:last-child{margin-bottom:0px;}
+.remind .form .p{line-height:54px;background:#fff;padding:0 15px;overflow:hidden;}
+.remind .form .p span{margin:0 15px 0 4px;color: #0087ff;}
+.form thead tr{background:#b5cce4;;line-height:28px;color:#fff;}
+.form tbody tr{text-align:center;height:50px;}
+.remind .form tbody tr td:last-child span{border-radius:16px;padding: 0 10px;border:1px solid #0087ff;color:#0087ff;    cursor: pointer;}
+.form tbody tr:nth-child(2n){background:#e9f0f7;}
+ .form tbody tr:nth-child(2n+1){background:#fbfcfe;}
+ .form tbody tr:hover{background:rgba(201, 207, 212, 0.48)}
+/*预约提醒内容  ---新增预约*/
+.remind .form.sed{overflow:hidden;}
+.sed>ul{background:#fff;overflow:hidden;  padding: 20px 0;}
+ .sed>ul li{width:28%;float:left;text-align:center;}
+ .sed>ul li:last-child{width:16%;}
+ .sed>ul li:last-child span{padding:4px 16px;color:#0087ff;border:1px solid #0087ff;border-radius:16px;-webkit-border-radius:16px;}
+.sed select{ margin-left: 10px;width: 50%;border-radius: 16px; padding: 0 10px;line-height: 28px;height: 28px;}  
+.remind .form tbody tr td:last-child .orange-span{border-radius:10px;padding: 0 10px;    border: 1px solid #ff5b00;color:#ff5b00;margin-left:4px;} 
+
+/*视屏记录 */
+/*头部table*/
+.content-table-top1{margin-top:30px;}
+.content-table-top1 thead tr{background:#b5cce3;color:#fff;line-height:46px;}
+.content-table-top1 tbody tr{text-align:center;background:#fff;line-height:28px;margin-bottom:10px;}
+.blue-sapn{border-radius:16px;padding: 0 10px;border: 1px solid #0087ff; color: #0087ff;cursor: pointer}
+.content-table-top1 .last-td span{margin-right:5px;border-radius:16px;padding:0 8px;border:1px solid #eee;}
+
+.content-table-top1 td{padding-bottom:16px;}
+.disa-nav-list ul li{float:left;margin:20px 0;width:12.5%;text-align:center;}
+.disa-nav-list ul{overflow:hidden;background:#f3f6f9;margin:0 10px;}
+.disa-nav-list li.active{padding:4px;background:#fff;border-radius:16px;-webkit-border-radius:16px;box-sizing: border-box;box-shadow:0 0 2px #adabab;}
+.dias .form{background:#fff;padding:0 16px;overflow:hidden;}
+.dias .form .title p{color:#ff5b00;font-size:16px;}
+.dias .form .title div input{margin:0 6px;}
+.dias .form .title div span{margin:0 8px;padding:4px;background:#fff;border-radius:16px;-webkit-border-radius:16px;border:1px solid #eee;}
+/*页脚*/
+.pageBtnWrap{margin:40px 0 20px 0;}
+.pageBtnWrap span.disabled {display: inline-block; height: 25px;line-height: 25px;padding: 0 10px; margin: 0 2px; color: #bfbfbf; background: #f2f2f2;border: 1px solid #e4e4e4; border-radius: 0; vertical-align: middle;
+}
+.pageBtnWrap span.curr { color: #fff; background-color: #eb002b; border: 1px solid #e4e4e4;}
+.pageBtnWrap a,#kkpager_btn_go,.spanDot,.curr{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;border: 1px solid #e4e4e4; margin: 0 2px;border-radius: 0; vertical-align: middle;text-decoration: none;cursor: pointer; background-color: white;color: black;
+}
+.infoTextAndGoPageBtnWrap {margin-left: 10px;line-height: 25px; vertical-align: middle;}
+.currPageNum, .totalPageNum {
+    margin: 0 5px;
+}
+#kkpager_btn_go_input {
+    width: 30px;
+    line-height: 25px;
+    height: 25px;
+    margin: 0 5px;
+    padding: 0 3px;border: 1px solid #e6e6e6;
+}
+/*用户管理*/
+ .conheight{height:calc( 100% - 82px );height:-webkit-calc( 100% - 82px );height:-moz-calc( 100% - 82px )}
+.content-3{padding-top:1px;}
+.warp3-left{width:240px;box-sizing: border-box;}
+.content-3 .mt-menu{background:#fff;}
+.mt-nav li{padding:0 16px;}
+.mt-nav .ul-1 li:hover{background:#dedede;}
+.content-3 .mt-menu .search{margin:30px 0 15px; position:relative;padding:0 16px;}
+.content-3 .mt-menu .search span{position:absolute;top:4px;left:33px;}
+.content-3 .mt-menu .search input{border-radius:12px;-webkit-border-radius:12px;background:#f1f6fc;width:100%;border:none;line-height:26px;padding-left:16px;}
+.content-3 .mt-menu .search i{position:absolute;right:25px;top:8px;}
+.mt-nav .ul-1 li,.mt-nav .ul-1 p{line-height:38px;font-size:14px;border-bottom:1px solid #aaa;color:#666;}
+
+.mt-nav .ul-2>li{font-size:14px;line-height:28px;font-size:14px;position:relative;}
+.ul-doctor-list li:hover{border-bottom:1px solid #eee;    background: #dedede}
+.mt-nav .ul-2>li i{color:#0087ff;position:absolute;top:4px;right:10px;}
+.mt-nav .ul-2>li ul{display:none;}
+.mt-nav .ul-2 ul li{line-height:22px;color:#aaa;font-size:12px;}
+.warp3-right,.taking{margin-left:250px;border-radius:16px;padding-top:16px;overflow:hidden;height:100%;    box-sizing: border-box;}
+.taking{font-size:16px;position:relative; display:none}
+.taking>div{margin-top:23%;text-align:center}
+.taking  span{position:absolute;top:30px;right:30px}
+.taking .img{width:200px;height:150px;margin-bottom:10px;display:inline-block;    font-size: 130px;line-height: 150px; color: #ccc;text-align: center;}
+.content-main-warp p{line-height:60px;background:#fff;font-size:16px;padding-left:16px;}
+.content-main-warp .sed>ul li:last-child span{    padding: 4px 40px;}
+.content-main-warp .btn-group1 span{color:#fff;font-size:14px;padding:6px 10px;background:#b5cce4;border-radius:16px;margin:10px 4px;}
+.content-main-warp .sed>ul,.btn-group{background:#f9fbfc;overflow:hidden;}
+
+/*在线问诊----聊天窗口左边*/
+.chat-nav{background: #fff;height:100%;}
+.chat-nav .title {padding-left: 16px;line-height: 40px;background: #fff;font-size: 14px;}
+.chat-nav-list .chat-item:hover{ background: #f0f4f8;}
+.chat-nav-list .chat-item.active { border-right: 4px solid #0087ff;    background: #f0f4f8;}
+.chat-nav-list .chat-item{border-top: 1px solid #b7b5b5;color: #333; overflow: hidden; height: 68px;}
+.chat-nav-list .chat-item .user-img {width: 64px;display: table-cell;vertical-align: middle;text-align: center; height: 100%;}
+.chat-item  .user-img img {width: 40px;border-radius: 50%;border: 4px solid #e6c633;height: 40px;}
+.chat-item .tem-show p {font-size: 14px; color: #444;margin-top: 4px;}
+.chat-content-le {     width: -webkit-calc( 100% - 240px );width: -moz-calc( 100% - 240px );width: calc( 100% - 240px );border-radius: 10px 10px 0 0;    position: relative;height: 100%;}
+.chat-content-show-area{display:none;}
+.chat-content-le .title {height: 60px;line-height: 60px;font-size: 16px; border-radius: 10px 10px 0 0; background: #fff;}
+.chat-content-le .title .doctor { font-size: 18px;margin: 0 2px;}
+.patient-title{font-size:18px;margin-left:20px}
+.chat-content-le p {float: right;margin-right: 10px;font-size:14px;}
+.chat-content-le p.doctorsUser{float:left;margin-left:20px;font-size:18px}
+.warp3-right .take-content {background: #f9fbfc;box-sizing: border-box;position: absolute;width: 100%;top: 60px; left: 0px;    bottom: 30%;}
+.scrollbar{ overflow-y:hidden;    bottom: 30%;}
+.scrollbar.active{overflow-y:auto!important}
+.warp3-right .take-content .take-content-area { padding-top: 10px;}
+.warp3-right .take-content  .take-content-area .ss {overflow: hidden;}
+.warp3-right .take-content .ask-question .img { width: 35px;height: 35px; border-radius: 50%; float: left;margin-left: 15px;}
+.warp3-right .take-content .ask-question p { float: left;margin:2px 0  0 10px;    cursor: default;}
+.take-content .ss p{padding: 5px; border: 1px solid #aaa; margin-bottom: 5px; position: relative; max-width: 350px;
+}
+.take-content .ss{margin-bottom:5px}
+.take-content .answer-question p{border-radius:16px 16px 0;background: #0087ff;    cursor: default;}
+.take-content .ask-question p{border-radius:0 16px 16px;    background: #ee7a2f;}
+.answer-question .img { width: 35px;height: 35px; border-radius: 50%;float: right; margin-right: 15px}
+.answer-question .chat-image,.ask-question .chat-image{max-width:120px;    max-height: 120px;}
+.model-warpall{position:fixed;top:0;left:0;bottom:0;width:100%;z-index:100;display:none;}
+.model-warpall.on{display:-webkit-flex; display: flex;justify-content:center;align-items:center;    z-index: 100;position: absolute;}
+model-warpall img{width:100%}
+.chat-content-le .take-content-box{background:#fff;position: absolute;top: 70%;left: 0px;bottom:0;
+    width: 100%;}
+.chat-content-le .take-content-box .take-tool span{font-size: 14px;}
+.chat-content-le .take-content-box .take-tool {padding:0 20px;}
+.chat-content-le .take-content-box .take-tool i{color:#0087ff;font-size:21px;margin:0 5px;vertical-align: middle;}
+.web_wechat_face {background: url(../images/sprite.png) 0 4px;width: 30px;height: 30px;vertical-align: middle; display: inline-block;} 
+.chat-content-le .take-content-box textarea{width: 100%;border: 0; resize: none;text-indent: 1em;position: absolute;top: 30px; bottom: 45px;}
+.information {width: 240px;border-radius: 0 10px;overflow:hidden;height:100%}
+.position{    position: relative; height: 100%;}
+.information-1{    position: absolute;top: 0; left: 0; bottom: 65%; width: 100%;}
+.information .title { padding-left: 16px;height: 50px;line-height: 50px;font-size: 16px;background: #fff;}
+.take-send{padding:4px 12px;background:#0087ff;color:#fff;border-radius:12px;font-size:14px;bottom: 10px;right: 15px;position: absolute;cursor: pointer;}
+.information-1-show {height: calc( 100% - 50px )}
+.information-2{position: absolute; top: 36%; left: 0; bottom: 35%;width:100%}
+.information-1-show .information-item {margin: 5px 0;}
+.information-1-show .information-item:hover{background:#fff;}
+.information-1-show .information-item .p1 {font-size: 12px; color: #aaa;    cursor: default;float:left;margin-right:6px}
+.information-1-show .information-item .p2 {font-size: 14px;color: #333;}
+.sre:after{display:table;content:"";clear:both}
+.sre{line-height: 30px;}
+.information-2 .operation{margin-top:10px; height:-webkit-calc(100% - 50px); height:-moz-calc(100% - 50px);  height: calc( 100% - 50px );}
+.information-2 .operation li{width:33.33%;float:left;margin-bottom:10px;}
+.information-2 .operation li>div{width:80%;text-align:center;color:#aaa;}
+.information-2 .operation li i{font-size:28px;color:#0087ff;}
+.information-3{    position: absolute;top: 66%; bottom: 0%;width: 100%;}
+.information-3 .padding-l16{height: -moz-calc(100% - 50px);height: -webkit-calc(100% - 50px);height: calc( 100% - 50px );background:#f9fbfc;}
+.information-3 .title .color-blue{font-size:12px;float:right;margin-right:16px;cursor: pointer;}
+.information-3 .padding-l16 .item{padding:4px 0;color:#666;font-size:14px;    cursor: default;}
+/*健康档案*/
+.disa-nav-list{background:#f3f6f9;}
+.disa-nav-list .table{background:#fff;padding:0 16px;margin:0 10px;} 
+.disa-nav-list .table .title{line-height:36px;color:#b5cce3}
+.disa-nav-list table {line-height:26px;border-collapse:separate;border-spacing:2px;}
+.disa-nav-list table tr{margin-bottom:2px;}
+.disa-nav-list table th{text-align:left;background:#e9f0f7;padding-left:16px;width:20%;}
+.disa-nav-list table td{text-align:left;background:#f7fafc;padding-left:16px;}
+.disa-nav-list table td:hover{background:#dedede;}
+.disa-nav-bottom {overflow:hidden;}
+.disa-nav-bottom span{text-align:center;padding:6px 14px;color:#0087ff;border-radius:16px;margin:30px auto;border:1px solid #0087ff;display:table;}
+.disa-nav-bottom span:hover{    background:#027fef;color:#fff;}
+
+/*/新添加的样式*/
+ .user-img{position:relative;}
+ .user-img .message-num{border-radius:50%;width:14px;height:14px;position:absolute;top:10px; text-align: center; right: 8px;color:#000;background:red;line-height:14px;color:#fff;font-size:12px}
+ .user-img .vip{position:absolute;bottom:9px;right:4px;height:14px;background:#000;color:#fff;font-size:12px;padding:0 7px;border-radius:10px;line-height:14px}
+.chat-item .item-show{width:162px;display:table-cell;vertical-align:middle;}
+.chat-nav-list .chat-item{    display: table;}
+.chat-nav .item-show  p{font-size:14px;margin-left:4px;}
+.chat-nav .item-show  p span{white-space: nowrap; overflow: hidden;text-overflow: ellipsis;float:left;max-width: 150px;}
+.chat-nav-list{height: -moz-calc(100% - 60px);height: -webkit-calc(100% - 60px);height: calc(100% - 60px);    margin-bottom: 20px;}
+ .face { margin-top: 4px;background: #fff;padding: 2px;border: 1px #dfe6f6 solid;width: 283px;}     
+.face img {cursor: pointer; border: 1px #fff solid; display: inline-block; padding: 2px 2px;width:34px;height:34px;float:left}
+.face img:hover { border: 1px #0066cc solid;}
+.voice{display:inline-block;width:150px;height:30px;background:#d7d8da;border-radius: 8px;position:relative}
+.voice .voice-png{background:url(../images/voice.png);position:absolute;left:20px;background-size:cover;width:30px;height:30px;display:inline-block}
+.voice .voice-gif{background:url(../images/voice.gif);position:absolute;left:20px;background-size:cover;width:30px;height:30px;display:inline-block}
+.voice .time{position:absolute;right:-25px;line-height:30px;font-size:13px;color:#777;font-style:normal}
+.voice .litter{width:6px;height:6px;border-radius:50%;display:inline-block;position:absolute;top:-5px;right:-25px;background:red}
+.doctorsUser-name {width :-webkit-calc(100% - 80px);width :-moz-calc(100% - 80px);width: calc(100% - 80px); white-space: nowrap; overflow: hidden;text-overflow: ellipsis; float:right}
+.model-image {width:80% ;height:80%;text-align: center;display: -webkit-flex;display: flex;justify-content: center;align-items: center;
+}

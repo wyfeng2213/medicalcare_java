@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<title></title>
+
+
+<script>
+	window.onload = function() {
+		var e1 = document.getElementById("A_VerifyCode");
+		var e2 = document.getElementById("S_VerifyCode");
+		if (e1.value != "" || e2.value != "") {
+			location.reload();
+		}
+	}
+</script>
+
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/dengzhu.css">
+<style>
+.getPic {
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+	margin-left: 26px;
+}
+
+#denglu {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%
+}
+
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	display: table;
+	width: 100%
+}
+
+.w630 {
+	width: 630px;
+	margin: auto
+}
+
+.bottom_box1{ font-size:0.8em;
+                 width:22em;
+			     margin:auto;
+			     margin-top:8%;}
+.bottom_box1 td{ width:6em;
+				 text-align:center;}
+</style>
+</head>
+<body>
+	<div id="denglu">
+		<div class="w630">
+			<div class="content">
+				<div class="top-tilte">
+					<h1>粤健康</h1>
+					<p>运营管理平台</p>
+				</div>
+
+				<div class="form">
+					<div class="form-nav">
+						<ul>
+							<li class="active">账号登录</li>
+							<li>短信登录</li>
+						</ul>
+					</div>
+
+
+					<div>
+						<!--medicalcare/web/secretaryLoginInfo/login.action?hUserName= &hUserPassword= &verifyCode=-->
+						<form action="">
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    手机号码/电子邮箱
+                                </span>-->
+								<input type="text" value="" placeholder="手机号码/电子邮箱"
+									class="login-text" id="hUserName">
+							</div>
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    请输入密码
+                                </span>-->
+								<input type="password" value="" placeholder="请输入密码"
+									class="login-text" id="hUserPassword">
+							</div>
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    请输入图形验证码
+                                </span>-->
+								<input type="text" value="" placeholder="请输入图形验证码"
+									class="login-text login-text-1" id="A_VerifyCode"> <img
+									src="/medicalcare/imgVcode" alt="" class="icon-pic"> <span
+									onclick="getPic()"><span class=""><img
+										src="images/get-pic.jpg" alt="Alternate Text" class="getPic" /></span></span>
+							</div>
+							<div class="login-links">
+								<button id="accountlogin">立即登陆</button>
+								<br> <a href="" target="_blank" style="display: none">忘记密码?点击找回</a>
+							</div>
+						</form>
+						<form action="" style="display: none">
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    手机号码
+                                </span>-->
+								<input type="text" value="" placeholder="手机号码"
+									class="login-text" id="phoneNum">
+							</div>
+
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    请输入图形验证码
+                                </span>-->
+								<input type="text" value="" placeholder="请输入图形验证码"
+									class="login-text login-text-1" id="S_VerifyCode"> <img
+									src="/medicalcare/imgVcode" alt="" class="icon-pic"> <span
+									onclick="getPic()"><img src="images/get-pic.jpg"
+									alt="Alternate Text" class="getPic" /></span>
+							</div>
+							<div class="field username-field">
+								<!--<span class="ph-label ">
+                                    短信验证码
+                                </span>-->
+								<input type="text" value="" placeholder="短信验证码"
+									class="login-text login-text-1" id="SmsCode"> <input
+									value=" 免费获取验证码" class="mession_yanzheng login-text-1"
+									onclick="DoSendPhoneCode(this);">
+							</div>
+							<div class="login-links">
+								<button id="smslogin">立即登陆</button>
+								<br>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<div class="bottom_box">
+					<table class="bottom_box1">
+						<tr>
+							<td><a href="#" onclick="security_prompt()" />安全规则 </a> &nbsp;</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jq.js"></script>
+	<script src="js/base64.js"></script>
+	<script src="js/jQuery.md5.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/app.js"></script>
+	<script src="layer/layer.js"></script>
+	<script>
+		$(".field input").focus(function() {
+			$(this).attr("placeholder", "")
+		})
+		$(".field input").each(
+				function(i, item) {
+					var arr = [ "手机号码/电子邮箱", "请输入密码", "请输入图形验证码", "手机号码",
+							"请输入图形验证码", "短信验证码" ]
+					$(item).blur(function() {
+						if ($(item).val() == "") {
+							$(item).attr("placeholder", arr[i])
+						}
+					})
+
+				});
+		$(function() {
+			$(".form-nav li").each(
+					function(i, ele) {
+						$(ele).click(
+								function() {
+									$(this).addClass("active").siblings()
+											.removeClass("active");
+									console.log($("form"))
+									$("form").eq(i).css("display", "block")
+											.siblings().css("display", "none")
+
+								})
+
+					})
+
+			$('#smslogin')
+					.click(
+							function(e) {
+								e.stopPropagation();
+								e.preventDefault();
+								var thePhone = $("#phoneNum").val();
+								var theCode = $("#SmsCode").val();
+								var theverifyCode = $("#S_VerifyCode").val();
+
+								var theUrl = "/medicalcare/web/secretaryLoginInfo/codeLogin.action?phone="
+										+ thePhone
+										+ "&code="
+										+ theCode
+										+ "&verifyCode=" + theverifyCode;
+								var next = sms(thePhone, theverifyCode, theCode)
+								if (next) {
+									CallGetService(theUrl, {}, function(data) {
+										if (data.code == 200) {
+											APP.Login(data, function() {
+												APP.Go(APP.URL.WEBCHAT);
+											});
+										} else {
+											$("#S_VerifyCode").val("");
+											$("#S_VerifyCode").attr(
+													"placeholder", "请输入图形验证码")
+											layer.msg(data.message);
+											getPic();
+										}
+									});
+								}
+
+							});
+			function sms(phone, password, code) {
+				// 校验验证码
+				if (!phone) {
+					layer.msg('请填写手机号码')
+					return false;
+				} else if (!password) {
+					layer.msg('请输入图形验证码')
+					return false;
+				} else if (!code) {
+					layer.msg("短信验证码")
+					return false;
+				} else {
+					return true;
+				}
+			}
+			function check(phone, password, code) {
+				// 校验验证码
+				if (!phone) {
+
+					layer.msg('请输入账号');
+					return false;
+				} else if (!password) {
+
+					layer.msg('请输入密码');
+					return false;
+				} else if (!code) {
+
+					layer.msg("请输入图形验证码");
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+			$('#accountlogin')
+					.click(
+							function(e) {
+								//debugger
+								e.stopPropagation();
+								e.preventDefault();
+								//var base = new Base64();
+								var userName = $("#hUserName").val();
+								// userName = base.encode(userName);
+								//alert(userName)
+								var hUserPassword = $("#hUserPassword").val();
+								hUserPassword = $.md5(hUserPassword);
+								//alert(hUserPassword)
+								var verifyCode = $("#A_VerifyCode").val();
+								var theUrl = "/medicalcare/web/secretaryLoginInfo/login.action?hUserName="
+										+ userName
+										+ "&hUserPassword="
+										+ hUserPassword
+										+ "&verifyCode="
+										+ verifyCode;
+								var next = check(userName, hUserPassword,
+										verifyCode)
+								if (next) {
+									debugger
+									CallPostService(theUrl, {}, function(data) {
+										if (data.code == 200) {
+											APP.Login(data, function() {
+												APP.Go(APP.URL.WEBCHAT);
+											});
+										} else {
+
+											$("#A_VerifyCode").val('');
+											$("#A_VerifyCode").attr(
+													"placeholder", "请输入图形验证码")
+											layer.msg(data.message);
+											getPic();
+											return false
+										}
+
+									});
+								}
+
+							});
+
+		})
+
+		var countdown = 60;
+		function settime(val) {
+			if (countdown == 0) {
+				val.removeAttribute("disabled");
+				val.value = "免费获取验证码";
+				countdown = 60;
+			} else {
+				val.setAttribute("disabled", true);
+				val.value = "重新发送(" + countdown + ")";
+				countdown--;
+				setTimeout(function() {
+					settime(val)
+				}, 1000)
+			}
+
+		}
+
+		function getPic() {
+			debugger
+			$(".icon-pic").attr("src",
+					"/medicalcare/imgVcode?flag=" + Math.random());
+			$("#A_VerifyCode").val('');
+			$("#S_VerifyCode").val('');
+		};
+
+		function DoSendPhoneCode(ele) {
+
+			var thePhone = $("#phoneNum").val();
+			if (thePhone.isCMCCMobilePhone() == false) {
+				layer.msg('只输入正确的移动手机号！');
+			} else {
+				settime(ele)
+				sendCode(thePhone);
+			}
+
+		};
+
+		function sendCode(phone) {
+			CallGetService(
+					"/medicalcare/web/secretaryLoginInfo/sendCode.action?phone="
+							+ phone, {}, function(data) {
+
+						layer.msg(data.message);
+					});
+		}
+		
+		//安全规则
+		function security_prompt() {
+			OpenWindow=window.open("", "newwindow", "left=200, top=100, height=700, width=900,toolbar=no,scrollbars=yes,menubar=no");
+			OpenWindow.document.write("<HTML>");
+			OpenWindow.document.write("<title>安全规则</title>");
+			OpenWindow.document.write("<BODY BGCOLOR=#ffffff>"); 
+			OpenWindow.document.write("<h1>安全规则</h1>"); 
+			OpenWindow.document.write("<p>一、遵守国家法律和行政法规，不得利用国际联网危害国家安全、泄露国家秘密，不得侵犯国家的、社会的、集体的利益和公民的合法权益，不得从事违法犯罪活动。</p>");
+			OpenWindow.document.write("<p>二、不得利用本网站平台、系统制作、发布和传播下列违法信息：</p>");
+			OpenWindow.document.write("<p> （一）煽动抗拒、破坏宪法和法律、行政法规实施的；</p>");
+			OpenWindow.document.write("<p> （二）煽动颠覆国家政权，推翻社会主义制度的；</p>");
+			OpenWindow.document.write("<p> （三）煽动分裂国家、破坏国家统一的；</p>");
+			OpenWindow.document.write("<p> （四）煽动民族仇恨、民族歧视，破坏民族团结的</p>");
+			OpenWindow.document.write("<p> （五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；</p>");
+			OpenWindow.document.write("<p> （六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖，教唆犯罪的；</p>");
+			OpenWindow.document.write("<p> （七）公然侮辱他人或者捏造事实诽谤他人的；</p>");
+			OpenWindow.document.write("<p> （八）损害国家机关信誉的；</p>");
+			OpenWindow.document.write("<p> （九）其他违反宪法和法律、行政法规的。</p>");
+			OpenWindow.document.write("<p>三、不得利用网站平台、系统从事下列危害计算机信息网络安全的活动：</p>");
+			OpenWindow.document.write("<p> （一）未经允许，进入计算机信息网络或者使用计算机信息网络资源的；</p>");
+			OpenWindow.document.write("<p> （二）未经允许，对计算机信息网络功能进行删除、修改或者增加的；</p>");
+			OpenWindow.document.write("<p> （三）未经允许，对计算机信息网络中存储、处理或者传输的数据和应用程序进行删除、修改或者增加的；</p>");
+			OpenWindow.document.write("<p> （四）故意制作、传播计算机病毒等破坏程序的；</p>");
+			OpenWindow.document.write("<p> （五）其他危害计算机信息网络安全的。</p>");
+			OpenWindow.document.write("</BODY>");
+			OpenWindow.document.write("</HTML>");
+			OpenWindow.document.close();
+		}
+
+	</script>
+
+</body>
+</html>

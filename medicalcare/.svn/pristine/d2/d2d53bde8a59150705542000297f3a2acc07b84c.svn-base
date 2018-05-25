@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="">
+    <script src="js/jq.js"></script>
+      <script src="layer/layer.js"></script>
+    <style>
+        .model-warp {
+            width: 100%;
+            height: 100%;
+        }
+
+            .model-warp form {
+                width: 100%;
+                margin: 0 auto;
+                overflow-y: hidden;
+                padding: 0 10px;
+                box-sizing: border-box;
+                -webkit-height: calc(100% - 50px);
+                -moz-height: calc(100% - 50px);
+                -ms-height: calc(100% - 50px);
+                height: calc(100% - 50px);
+            }
+
+        .model-title {
+            width: 100%;
+            line-height: 40px;
+            font-size: 16px;
+            background: #fff;
+            margin-bottom: 10px;
+            text-indent: 12px;
+            font-weight: 700;
+        }
+
+            .model-title span {
+                float: right;
+                margin-right: 20px;
+                width: 40px;
+                border-radius: 50%;
+                background: #868a82;
+                cursor: pointer;
+            }
+
+        .form_1 {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #333;
+            background: #fff;
+            background: #f9fbfc;
+            height: 100%;
+        }
+
+        .left1 {
+            width: 35%;
+            text-align: left;
+            vertical-align: top;
+            font-weight: 700;
+            font-size: 16px;
+            float: left;
+        }
+
+        .right1 {
+            width: 64%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            text-align: center;
+        }
+
+        .form_1 .form-1-list, .form_1 .form-2-list {
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+            .form_1 .form-1-list .left, .form_1 .form-2-list .left {
+                width: 100%;
+                text-align: left;
+                vertical-align: top;
+                font-weight: 700;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            .form_1 .form-1-list .right, .form_1 .form-2-list .right {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .form_1 .form-2-list .left {
+                text-align: left;
+            }
+
+            .form_1 .form-1-list input, .form_1 .form-1-list textarea {
+                color: #666;
+                width: 100%;
+                resize: none;
+            }
+
+        .form_1 .form-1-button span {
+            font-weight: 700;
+            line-height: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .form_1 .form-1-button button {
+            border-radius: 20px;
+            background: #0087ff;
+            padding: 5px 25px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+        }
+
+        .form_1 .form-1-button {
+            display: table;
+            margin: 20px auto;
+        }
+
+        .align-c {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .le {
+            float: left;
+        }
+
+        .ri {
+            float: right;
+        }
+
+        .weight, .form-2-list .top {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .form-2-list .top, .form-2-list .bottom {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-2-list textarea {
+            width: 100%;
+        }
+
+        .text-indent {
+            padding: 1px 4px;
+            font-size: 14px;
+        }
+        .form_1 .form-1-list .right, .form_1 .form-2-list .right {  box-sizing: border-box; padding-left: 0px; text-align:left; }
+    </style>
+</head>
+<body style="height:100%;">
+
+    <div class="model-warp">
+        <div class="form_1">
+            <div class="model-title">
+                转医生处理意见单
+
+            </div>
+            <form action="/medicalcare/web/secretaryDoctorsAdvice/insertDoctorAdvice.action" method="post" enctype="multipart/form-data">
+                <div class="form-1-list">
+                    <input type="hidden" name="parameter" id="parameter" />
+                    <input type="hidden" name="equipmentData" id="equipmentData" />
+                    <span class="left1"> 患者:</span>
+                    <span class="right1 weight field" data-field="patientName">张三</span>
+                </div>
+                <div class="form-1-list">
+                    <span class="left">解决的问题:</span>
+                    <span class="right"><textarea id="problem" name="problem" maxlength="40" cols=40 rows=3 placeholder="请输入问题" class="text-indent"></textarea></span>
+
+                </div>
+                <div class="form-1-list">
+                    <span class="left">初诊意见:</span>
+                    <span class="right">
+                        <textarea name="advice" id="advice" rows=6 placeholder="请输入建议" maxlength="150" class="text-indent"></textarea>
+                    </span>
+                </div>
+                <div class="form-1-list">
+                    <span class="left" style="vertical-align: middle;">出诊意见:</span>
+                    <span class="right">
+                        <input type="text" style="height:32px;width:155px" readonly id="input_file" class="text-indent">
+                        <label>
+                            <input type="file" name="file" accept=".pdf,.txt,.jpg,.png,application/vnd.ms-excel" style="display:none" onchange="$('#input_file').val($(this).val())">
+                            <span style="border-radius:12px;padding:0 8px;line-height:32px;border-radius:12px;border:1px solid #aaa;float:right">上传</span>
+                            
+                        </label>
+                        <span>允许上传的文件格式：pdf、doc、excel、jpg、png、txt</span>
+                    </span>
+                </div>
+                <div class="form-1-button">
+                    <button >转诊给医生</button>
+                    <span class="ri">取消</span>
+                </div>
+                <div class="align-c">提交后将自动添加到问诊目录中去</div>
+            </form>
+
+        </div>
+    </div>
+    <script src="js/jq.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/webchat.js"></script>
+    <script>
+        var parent = $("iframe", parent.document);
+        var mydiv = window.top.document.querySelector(".body .right-message")
+       
+
+        //parameter = { "patientName": "张志明", "patientPhone": "15876589634", "doctorsPhone": "15876587133", "doctorsName": "余春娇", "problem": "感冒发烧", "advice": "打吊针", "secretaryName": "", "secretaryPhone": "12345678912" }
+        var chatRoomData = location.search.split('=')[1];
+
+        if (!chatRoomData) {
+
+            $(parent).css({ "display": "none" })
+            $(parent).attr({ "src": "" })
+
+        }
+
+        chatRoomData = JSON.parse(unescape(chatRoomData));
+
+        updateField($('form'), chatRoomData);
+      
+        $(".ri").click(function () {
+            var body = $(this).closest(".body")
+            console.log(body)
+            $(mydiv).css("display", "block")
+            $(parent).css({ "display": "none" })
+            $(parent).attr({ "src":""})
+        })
+        $("button").click(function(e){
+            debugger
+            var text = $('#input_file').val(), a;
+            var arr = ["pdf", "doc", "excel", "jpg", "png", "txt"]
+            for (var i = 0; i < arr.length; i++) {
+                if (text.indexOf(arr[i]) != -1) {
+                    a = true;
+                }
+            };
+            if (a == undefined ) {
+                e.stopPropagation();
+                e.preventDefault();
+                layer.msg("输入格式不正确");
+
+            } else if ($('#problem').val() == "") {
+                e.stopPropagation();
+                e.preventDefault();
+                layer.msg("不能为空");
+               
+            } else {
+                layer.msg("发送成功");
+                // secretaryName、secretaryPhone
+                var thePostData = {
+                    patientName: chatRoomData.patientName,
+                    patientPhone: chatRoomData.patientPhone,
+                    doctorsPhone: chatRoomData.doctorsPhone,
+                    doctorsName: chatRoomData.doctorsName,
+                    secretaryName: chatRoomData.secretaryName,
+                    secretaryPhone: chatRoomData.secretaryPhone
+                };
+                equipmentData: JSON.stringify(theClientState);
+                thePostData.problem = $('#problem').val();
+                thePostData.advice = $('#advice').val();
+                var theClientState = EquipmentData.GetClientState();
+                $('#equipmentData').val(JSON.stringify(theClientState));
+                $('#parameter').val(JSON.stringify(thePostData));
+                //$(parent).css({ "display": "none" })
+                $(parent).attr({ "src": "" })
+                //$(mydiv).css("display", "block")
+
+            }
+           
+
+        }) 
+          
+
+
+        /* var mydiv = window.top.document.querySelector(".body .two")
+         console.log(window.parent)
+         $("body").keydown(function (eee) {
+             var e = eee || window.event;
+             if (e.keyCode == 8) {
+                 mydiv.click()
+
+             }
+         })*/
+    </script>
+</body>
+</html>

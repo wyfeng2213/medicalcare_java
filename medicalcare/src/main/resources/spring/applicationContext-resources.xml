@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd   
+	http://www.springframework.org/schema/tx   
+	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd   
+	http://www.springframework.org/schema/context   
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd   
+	http://www.springframework.org/schema/util    
+	http://www.springframework.org/schema/util/spring-util-4.1.xsd   
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd 
+	http://www.springframework.org/schema/cache    
+	http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass">
+			<value>${jdbc.driverClassName}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${jdbc.url}</value>
+		</property>
+		<property name="user">
+			<value>${jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${jdbc.password}</value>
+		</property>
+		<!-- 初始化链接数 -->
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+		<!-- 连接池可分配最大连接数 -->
+		<property name="maxPoolSize">
+			<value>100</value>
+		</property>
+		<!-- 连接池可分配最小连接数 -->
+		<property name="minPoolSize">
+			<value>10</value>
+		</property>
+		<!--最大空闲时间,1800秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="1800" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement" value="3" />
+		<property name="maxStatements" value="1000" />
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod" value="60" />
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts" value="30" />
+		<property name="breakAfterAcquireFailure" value="true" />
+		<property name="testConnectionOnCheckout" value="false" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!--c3p0 创建Slave jdbc数据源 -->
+	<bean id="slaveDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass">
+			<value>${slave.jdbc.driverClassName}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${slave.jdbc.url}</value>
+		</property>
+		<property name="user">
+			<value>${slave.jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${slave.jdbc.password}</value>
+		</property>
+		<!-- 初始化链接数 -->
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+		<!-- 连接池可分配最大连接数 -->
+		<property name="maxPoolSize">
+			<value>100</value>
+		</property>
+		<!-- 连接池可分配最小连接数 -->
+		<property name="minPoolSize">
+			<value>10</value>
+		</property>
+		<!--最大空闲时间,1800秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime" value="1800" />
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement" value="3" />
+		<property name="maxStatements" value="1000" />
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod" value="60" />
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts" value="30" />
+		<property name="breakAfterAcquireFailure" value="true" />
+		<property name="testConnectionOnCheckout" value="false" />
+	</bean>
+
+	<bean id="transactionManager_2"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="slaveDataSource" />
+	</bean>
+
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager_2" />
+
+	<!-- 创建SqlSessionFactory，同时指定数据源 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:config/mybatis.xml"></property>
+		<property name="mapperLocations">
+			<list>
+				<!-- 表示在com/cmcc/medicalcare/mappers包或以下所有目录中，以.xml结尾所有文件 -->
+				<value>classpath:com/cmcc/medicalcare/mappers/*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 创建SlaveSqlSessionFactory，同时指定数据源 -->
+	<bean id="slaveSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="slaveDataSource" />
+		<property name="configLocation" value="classpath:config/mybatis.xml"></property>
+		<property name="mapperLocations">
+			<list>
+				<!-- 表示在com/cmcc/medicalcare/mappers包或以下所有目录中，以.xml结尾所有文件 -->
+				<value>classpath:com/cmcc/medicalcare/mappers/*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mybatisDAO" class="com.cmcc.medicalcare.dao.MybatisDAO"
+		scope="prototype">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean id="slavebatisDAO" class="com.cmcc.medicalcare.dao.SlavebatisDAO"
+		scope="prototype">
+		<property name="sqlSessionFactory" ref="slaveSqlSessionFactory" />
+	</bean>
+</beans>

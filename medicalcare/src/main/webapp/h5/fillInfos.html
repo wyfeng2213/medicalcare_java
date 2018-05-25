@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>填写个人信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/fillIfos.css">
+    <script src="js/fontSize.js"></script>
+</head>
+<body >
+    <div class="history">
+        <i onclick="window.history.back()"><</i>
+        <p>填写个人信息</p>
+    </div>
+    <div class="content-warp">
+        <div class="title">
+            签约家庭医生需要患者提供(必填)
+        </div>
+        <div class="page-wrap" id="page-wrap">
+            <form class="form-user-infos" action="">
+                <ul class="list-user-info">
+                    <li>
+                        <label for="user-name">姓名</label>
+                        <input type="text" name="userName" id="user-name" maxlength="25" class="mui-input-clear" placeholder="请输入真实姓名" />
+
+                    </li>
+                    <li>
+                        <label for="user-sex">身份证</label>
+                        <input type="text" name="userName" id="user-shenfen" maxlength="25" class="mui-input-clear" placeholder="请输入真实姓名" />
+                    </li>
+                </ul>
+                <button type="button" class="ellipse btn-apply">提交申请</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

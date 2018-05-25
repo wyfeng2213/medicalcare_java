@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" href="css/base.css" />
+		<script src="js/fontSize.js"></script>
+		<link rel="stylesheet" href="css/userInfos.css" />
+	</head>
+	<body>
+		<div class="page-wrap" id="page-wrap">
+			<form class="form-user-infos" action="">
+				<ul class="list-user-info">
+					<!-- <li>
+						<label for="">头像</label>
+						<span class="icon-user">
+							<img src="./images/icon_user_default.png" alt="" />
+						</span>
+					</li> -->
+					<li>
+						<label for="user-name">姓名<font size="1" color="red">(必填)</font></label>
+						<input type="text" autocomplete="off" name="userName" id="user-name" maxlength="25" class="mui-input-clear" placeholder="请输入真实姓名" data-input-clear="5" />
+						<span class="mui-icon mui-icon-clear mui-hidden"></span>
+					</li>
+					<li>
+						<label for="user-sex">性别</label>
+						<a href="#select-sex">
+							<input type="text" name="sex" id="user-sex" readonly="readonly" placeholder="请选择" />
+						</a>
+					</li>
+				</ul>
+				<div class="user-info">
+					<label for="user-birth-date">出生日期</label>
+					<input type="text" name="birthday" id="user-birth-date" readonly="readonly" placeholder="请选择" />
+				</div>
+				<!-- <ul class="mb-8">
+					<li class="user-info">
+						<label for="user-state">就诊状态</label>
+						<a href="#select-state">
+							<input type="text" name="visitState" id="user-state" readonly="readonly" placeholder="请选择" />
+						</a>
+					</li>
+					<li class="user-info hidden">
+						<label for="hospital">就诊医院</label>
+						<input type="text" id="hospital" name="hospital" maxlength="20" class="mui-input-clear" placeholder="请填写" data-input-clear="5" />
+						<span class="mui-icon mui-icon-clear mui-hidden"></span>
+					</li>
+					<li class="user-info hidden">
+						<label for="cardNum">诊疗卡号</label>
+						<input type="text" id="cardNum" maxlength="30" class="mui-input-clear" placeholder="请填写" data-input-clear="5" />
+						<span class="mui-icon mui-icon-clear mui-hidden"></span>
+					</li>
+				</ul>
+				<div class="user-info">
+					<label for="remarks">备注</label>
+					<input type="text" name="remarks" id="remarks" class="mui-input-clear" placeholder="可填写门诊号/病症等" data-input-clear="5" />
+					<span class="mui-icon mui-icon-clear mui-hidden"></span>
+				</div>
+				<p class="tips">
+					您填写的个人信息将作为验证申请，发送给医生。<br/>
+					您填写的内容越真实，通过的几率越高哦！
+				</p> -->
+				<button type="button" class="ellipse btn-apply">提交申请</button>
+			</form>
+			<form action="" id="form-userIcon">
+				<input id="file-userIcon" class="photo" accept="image/*" type="file">
+			</form>
+			<div id="select-sex" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">男</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">女</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#select-sex" style="color: #358bf7;"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			<!-- <div id="select-state" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">还未就诊</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">门诊治疗</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">住院治疗</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" class="option" style="color: #000;">已出院</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#select-state" style="color: #358bf7;"><b>取消</b></a>
+					</li>
+				</ul>
+			</div> -->
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="lib/makeThumb/binaryajax.js"></script>
+		<script src="lib/makeThumb/exif.js"></script>
+		<script src="lib/makeThumb/megapix-image.js"></script>
+		<script src="lib/makeThumb/jquery.make-thumb.js"></script>
+		<script src="js/userInfos.js"></script>
+	</body>
+
+</html>

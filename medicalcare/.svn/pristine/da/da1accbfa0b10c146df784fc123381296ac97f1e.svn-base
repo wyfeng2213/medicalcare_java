@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>用户注册和使用过程张贴安全规则</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.O,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link href="css/notice.css" rel="stylesheet" />
+    <script src="js/fontSize.js"></script>
+</head>
+<body>
+    <div class="content-myWarp">
+        <div class="notice">
+            <h3>用户注册和使用过程张贴安全规则:</h3>
+            <dl>
+                <dt>一、遵守国家法律和行政法规，不得利用国际联网危害国家安全、泄露国家秘密，不得侵犯国家的、社会的、集体的利益和公民的合法权益，不得从事违法犯罪活动。</dt>
+                <dt>二、不得利用本网站平台、系统制作、发布和传播下列违法信息：</dt>
+                <dd>（一）煽动抗拒、破坏宪法和法律、行政法规实施的；</dd>
+                <dd>（二）煽动颠覆国家政权，推翻社会主义制度的；</dd>
+                <dd>（三）煽动分裂国家、破坏国家统一的；</dd>
+                <dd>（四）煽动民族仇恨、民族歧视，破坏民族团结的；</dd>
+                <dd>（五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；</dd>
+                <dd>（六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖，教唆犯罪的；</dd>
+                <dd>（七）公然侮辱他人或者捏造事实诽谤他人的；</dd>
+                <dd>（八）损害国家机关信誉的；</dd>
+                <dd>（九）其他违反宪法和法律、行政法规的。</dd>
+                <dt> 三、不得利用网站平台、系统从事下列危害计算机信息网络安全的活动：</dt>
+                <dd>（一）未经允许，进入计算机信息网络或者使用计算机信息网络资源的；</dd>
+                <dd>（二）未经允许，对计算机信息网络功能进行删除、修改或者增加的；</dd>
+                <dd>（三）未经允许，对计算机信息网络中存储、处理或者传输的数据和应用程序进行删除、修改或者增加的；</dd>
+                <dd>（四）故意制作、传播计算机病毒等破坏程序的；</dd>
+                <dd>（五）其他危害计算机信息网络安全的。</dd>
+            </dl>
+        </div>
+
+    </div>
+
+</body>
+</html>

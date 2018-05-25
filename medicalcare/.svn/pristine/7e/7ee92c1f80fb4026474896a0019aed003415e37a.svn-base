@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下载</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        
+		<link rel="stylesheet" href="css/base.css" />
+		<script src="js/fontSize.js"></script>
+		<link rel="stylesheet" href="css/downLoad.css" />
+	</head>
+	<body>
+		<div class="page-wrap" id="page-wrap">
+			<span class="tips">下载APP，即刻享受私人医生服务</span>
+			<span class="icon-app">
+			 <img src="./images/icon.png" style="width:110px;height:100px;" />
+			</span>
+			<h2 class="title-app">粤健康</h2>
+			<span class="desc-app">您的专属私人医生服务</span>
+			<a class="ellipse download-ios" href="https://itunes.apple.com/cn/app/粤健康/id1260436839?mt=8">APP Store 下载</a>
+			<a class="ellipse download-android" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.cmcc.patient">应用宝下载</a>
+			<!-- <div class="apply-success">
+				<i>✔</i>
+				<span>已提交申请</span>
+			</div> -->
+		</div>
+	<script type="text/javascript">
+		 var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if(!isAndroid){
+    	document.querySelector(".download-android").style.display = "none";
+    }
+    if(!isiOS){
+    	document.querySelector(".download-ios").style.display = "none";
+    }
+	</script>
+	</body>
+</html>

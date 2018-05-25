@@ -1,0 +1,30 @@
+#ecop URL  service
+#ecopUrl=http://120.197.89.216:8033/trymeecop/ecop.do 
+ecopUrl=http://192.168.211.39/trymeecop/ecop.do
+shuyuanUrl=http://api.shuyuanwl.com:8080/api/sms/send
+#\u4E0A\u4F20\u6587\u4EF6\u8DEF\u52B2
+#uploadUrl=http://192.168.213.165:9001/medicalmedia/media/upload.action
+uploadUrl=http://120.197.89.249:9001/medicalmedia/media/upload.action
+
+notCheckURL=/app/doctorsLoginInfo/sendCode.action;/app/doctorsLoginInfo/codeLogin.action;/app/patientLoginInfo/sendCode.action;\
+/app/patientLoginInfo/codeLogin.action;\
+/app/doctorsLoginInfo/v2/sendCode.action;\
+/app/doctorsLoginInfo/v2/codeLogin.action;\
+/app/patientLoginInfo/v2/sendCode.action;\
+/app/patientLoginInfo/v2/codeLogin.action;\
+/app/patientUser/v2/insert.action;\
+/h5/patientLoginInfo/sendCode.action;/h5/patientLoginInfo/codeLogin.action;\
+/web/secretaryLoginInfo/login.action;/web/secretaryLoginInfo/sendCode.action;/web/secretaryLoginInfo/codeLogin.action;\
+/app/science/selectScinece.action;\
+/outer/identifyingCode/sendCode.action;/outer/identifyingCode/codeLogin.action;/outer/identifyingCode/sendSMS.action;\
+/outer/pushingResult/paymentResult.action;/outer/pushingResult/refundResult.action;\
+/outer/remindingPatient/orderReminding.action;\
+#sendCode
+sendCodelimitTimes = 5
+sendCodeProhibitedHours = 6
+sendCodeWhiteList = 13432947998;15876587133;13928980514;15994222449;13570469340;13632335352;13533746254;18529247615;13570231216;13480273468;15876523961;15521377484;13710240425;18520635230;15972068947;13418193804
+
+#jiuzhoutong
+#jiuZhouTongTestUrl= http://blueskytpnn.oicp.net/interface
+jiuZhouTongTestUrl= http://yjkpt.aisimob.com:8891/YJKPT
+appPaymentUrl = http://120.25.71.44:8089/pay/weixinapp/charges

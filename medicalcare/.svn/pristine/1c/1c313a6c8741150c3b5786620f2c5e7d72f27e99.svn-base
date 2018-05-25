@@ -1,0 +1,25 @@
+.model{width:100%;height:100%;background:#000;opacity:0.6;position:fixed;z-index:9998;top:0;left:0}
+.model-warp{width: 100%;height: 100%;}
+.model-warp form{width: 100%;margin: 0 auto;}
+.model-title{width:100%;line-height:32px;font-size:16px;background:#fff;margin-bottom:20px;    margin-left: 12px;}
+.model-title span{float:right;margin-right:20px; width:40px; border-radius: 50%; background: #868a82; cursor: pointer;}
+.form_1{width: 100%;margin: 0 auto; font-size: 14px;color: #333;background: #fff;}
+.form_1 .form-1-list,.form_1 .form-2-list{margin-bottom: 14px;}
+.form_1 .form-1-list .left,.form_1 .form-2-list .left{width: 35%; text-align: right; vertical-align: top; font-weight: 700; font-size: 16px;}
+.form_1 .form-1-list .right,.form_1 .form-2-list .right{width: 64%; box-sizing: border-box; padding-left: 10px;    text-align: right;}
+.form_1 .form-2-list .left{text-align: left;}
+.form_1 .form-1-list input, .form_1 .form-1-list textarea{color: #666;width:100%;}
+.form_1 .form-1-button span{font-weight: 700; line-height: 40px; font-size: 16px; cursor: pointer;    margin-left: 20px;}
+.form_1 .form-1-button button{border-radius: 20px; background: #0087ff; padding: 5px 56px; font-size: 18px; color: #fff; border: none;}
+.form_1 .form-1-button{display:table; margin: 20px auto;}
+.align-c{text-align: center; margin-bottom:20px;}
+.le{float:left}
+.ri{float:right}
+.weight, .form-2-list .top{
+    font-weight: 700;
+    font-size: 16px;
+}
+.form-2-list .top, .form-2-list .bottom{display:block;margin-bottom:8px}
+.form-2-list textarea{width:100%}
+.text-indent{padding:1px 4px;font-size:14px;}
+    

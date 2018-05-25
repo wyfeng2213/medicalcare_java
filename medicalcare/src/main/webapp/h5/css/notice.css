@@ -1,0 +1,6 @@
+body{font-size:14px;  background: #f0f4f9;    color: #333;}
+
+.content-myWarp {margin-top: 0.2rem;}
+.content-warp .item{margin-bottom:0.15rem;background:#fff;padding:0 0.22rem;font-size:0.14rem;line-height:1.4}
+.notice{margin-bottom:0.15rem;background:#fff;padding:0 0.22rem;font-size:0.14rem;line-height:1.4}
+dd{text-indent:1em;margin-bottom: 0.05rem;}

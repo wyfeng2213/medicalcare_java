@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+*{margin:0em; padding:0em;}
+body{font-family:"微软雅黑";}
+a{text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{vertical-align: middle;}
+.clear{clear:both;}
+
+/*#block_div{width:100%; height:auto;background:#dd271a}*/
+.block_div{width:100%; height:auto;background:#ffebc5}
+.discount{position:relative; width:100%; height:7.825em; border-bottom:0px solid #d2d2d2;}
+
+.already_handled{position:absolute; top:0em; right:0em; width:3.5em; height:3.5em; background:url(../images/finish.png) no-repeat;}
+
+.llth{position:absolute; margin-left:0.25em; margin-top:0.8em;}
+
+.l_name{position:absolute; margin-top:0.8em; margin-left:5.625em;width:100%}
+.l_name .title{font-size:0.9em; color:#353535; margin-bottom:0.125em;} 
+.l_name .abstract{font-size:0.625em; color:#999999;margin-bottom:0.125em; position: relative;}
+.l_name span{font-size:0.825em; color:#e73894; margin:0.1em 0em 0em 0.1em;}
+
+.handle_btn{width:100%; height:auto; text-align:center; padding:0.825em 0px;}
+.handle_btn .yes_handle{display:inline-block; width:7.625em; font-size:1.875em; font-weight:bold; height:2.125em; line-height:2.125em; color:#ffffff; text-align:center; background:#0085d0; border-radius:6px;}
+
+.translucent{position:fixed; top:0em; left:0em; width:100%; height:100%; background:#000; filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; z-index:9999;}
+.prompt{position:fixed; top:30%; left:50%; width:17.5em; height:auto; background:#FFF; border-radius:4px; z-index:999999;
+	-webkit-transform:translateX(-50%) translateY(-50%);
+    -moz-transform:translateX(-50%) translateY(-50%);
+    -o-transform:translateX(-50%) translateY(-50%);
+    -ms-transform:translateX(-50%) translateY(-50%);
+    transform:translateX(-50%) translateY(-50%);}
+.prompt .pro_button{position:relative; width:100%; height:auto;}
+.prompt p{height:2.5em; line-height:2.5em; font-size:0.875em; color:#666; margin-left:1.25em;}
+.prompt .pro_content{font-size:1em; color:#353535; padding:0.625em 1em; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2;text-align:center;}
+.pro_button .pro_close{display:inline-block; margin-left:4.25em;width:50%; height:2.45em; line-height:2.45em; color:#666; text-align:center;}
+
+.mobileinput {background:#fff; height:2.125em; width:12.625em; font-size:0.625em; border: 1px solid #000; margin-bottom:0.125em; border-radius:5px; -webkit-border-radius: 5px; -moz-border-radius:5px;}
+.smsnoinput {background:#fff; height:2.125em; width:4.825em; font-size:0.625em; border: 1px solid #000; margin-bottom:0.125em; border-radius:5px; -webkit-border-radius: 5px; -moz-border-radius:5px;}
+.btn_getsms {background:#fff; height:2.125em; width:7.625em; font-size:0.625em; border: 1px solid #000; margin:0em 0em 0.0em 0.425em; border-radius:5px; -webkit-border-radius: 5px; -moz-border-radius:5px;}
+
+.contentdiv{position:relative; width:100%; height:auto;text-align:center; }
+.contentdiv span{height:auto; font-size:0.825em; font-weight:bold; color:#ca0915; margin:0px 0.825em 0em 1.125em;}
+.contentdiv p{height:auto; font-size:0.825em; color:#ca0915; margin:0px 0.825em 0em 1.125em;}
+
+.stockdiv{position:relative; width:100%; height:auto;text-align:center; padding-top:0.625em;}
+.stockdiv span{height:auto; font-size:1.825em; font-weight:bold; color:#a21912;}
+.stockdiv p{height:auto; font-size:1.375em; font-weight:bold; color:#a21912; margin:0px 0.825em 0em 1.125em;}
+
+.stockinput {background:#fff; height:1.815em; width:6.625em; font-size:0.825em; border: 1px solid #000; margin:0em 0.325em 0.125em 0.425em; border-radius:5px; -webkit-border-radius: 5px; -moz-border-radius:5px;}
+
+.div_margin{position:relative; width:100%; height:1.825em; border-bottom:0px solid #d2d2d2;}
+
+.myproduct{overflow:hidden; width:100%; height:auto; padding-top:0.625em;padding-bottom:0.625em; background-size:100% 100%;border-top:1px solid #d2d2d2;}
+.myproduct_div_left{margin:0em 0em 0.1em 0.125em; float:left; height:1.3em; background:transparent; border-bottom:0px solid #d2d2d2; text-align:left;}
+.myproduct_div_right{margin:0em 0.125em 0.1em 0em; float:right; height:1.3em; background:transparent; border-bottom:0px solid #d2d2d2; text-align:right;}
+.myproduct_div_left span{margin:1em 1em 2px 4px;font-size:0.8em; color:#0087d4; height:auto;}
+.myproduct_div_right span{margin:1em 1em 2px 4px;font-size:0.8em; color:#0087d4; height:auto}
+

@@ -1,0 +1,55 @@
+.page-wrap{
+	padding:0.86rem 0 0 0;
+	text-align: center;
+}
+.page-title{
+	font-size: 0.3rem;
+	color: #3b92fd;
+}
+.page-desc{
+	display: inline-block;
+	margin:0.25rem 0 0.78rem 0;
+}
+
+.phone,.box-code{
+	padding:0 0.07rem 0 0.2rem;
+}
+.box-phone{
+	margin: 0 auto;
+}
+.box-code{
+	margin: 0.13rem auto 0.45rem;
+}
+.phone{
+	height: 0.2rem;
+	font-size: 0.15rem;
+	line-height: 0.2rem;
+}
+.code{
+	height: 0.3rem;
+	margin:0.1rem 0 0 0;
+	width: 1.2rem;
+	float: left;
+	font-size: 0.15rem;
+}
+.btn-getcode{
+	float: right;
+	width: 1.08rem;
+	height: 0.37rem;
+	background: #5da2f9;
+	color: #fff;
+	line-height: 0.37rem;
+	margin: 0.07rem 0 0 0;
+	padding:0;
+	text-align: center;
+}
+.btn-next{
+	background: #358bf7;
+	color: #fff;
+}
+.bg-abd0ff{
+	background: #abd0ff;
+}
+.agreement{
+	cursor:pointer;
+}

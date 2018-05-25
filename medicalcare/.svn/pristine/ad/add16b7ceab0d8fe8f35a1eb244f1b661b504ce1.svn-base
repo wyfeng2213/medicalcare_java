@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/model.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jq.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dexie.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/webchat.js"></script>
+    <style>
+        .doctorsUser-name {width :-webkit-calc(100% - 80px);width: calc(100% - 80px); white-space: nowrap; overflow: hidden;text-overflow: ellipsis; float:right}
+       
+    </style>
+</head>
+<body class="body">
+    <div style="height:90%;border-radius: 10px;overflow: hidden;box-shadow: 0 0 40px #1088e8;" class="width">
+        <div class="header">
+            <div class="le logo-color">
+                <img src="images/icon.png" style="width:70px;height:70px;margin:5px 10px;float: left;">
+                <span style="line-height: 80px;float: left;margin-left: 10px; font-size: 20px;color: #fff; font-weight: 700;">粤健康</span>
+            </div>
+            <div class="header-right q ">
+                <ul class=" header-nav le">
+                    <li><a href="index.html">在线问诊</a></li>
+                    <li class="active"><a href="">医生服务</a></li>
+                    <li><a href="#">预约申请</a></li>
+                    <li><a href="#">患者管理</a></li>
+                </ul>
+
+                <div class="user-operation le">
+                    <div class="user user-title">
+                        <span>欢迎你,&nbsp<span class="user-name field" data-field="userName"></span></span>
+                    </div>
+                    <a href="javascript:APP.Logout()" class="close-out"><i class=" icon-off"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="content-3 conheight">
+            <div class="le warp3-left chat-nav">
+                <div class="title">医生信息</div>
+                <div class="chat-nav-list " style="overflow-y:auto">
+
+                </div>
+            </div>
+            <div class="warp3-right" style="display:none">
+                <div class="chat-content-le le">
+                    <div style="position: absolute; z-index: 1000; bottom: 30%; left: 4px;display:none" class="face scrollbar">
+                    </div>
+                    <div class="chat_content_view">
+                       <!-- <div class="moban">
+                            <div class="title">
+                                <span></span>
+                                <p>责任医生:<span></span></p>
+                            </div>
+                            <div class="take-content" style="overflow-y:auto">
+                                <div class=" ">
+                                </div>
+                            </div>
+
+                        </div>-->
+
+                    </div>
+
+                    <div class="take-content-box">
+                        <div class="take-tool">
+                            <span class="image-send"><i class=" icon-picture"></i>图片</span>
+                            <span class="get-face"><i class="web_wechat_face "></i>表情</span>
+
+                            <span class="ri hidden"><i></i>咨询记录</span>
+                        </div>
+                        <textarea class="srcollbar"></textarea>
+                        <span class="take-send">发送</span>
+                    </div>
+                </div>
+                <div class="chat-content-ri information le">
+                    <div class="margin-l10 position">
+                        <div class="information-1">
+                            <div class="title">
+                                <span style="width:70px;float:left">医生信息</span>
+                                <span data-field="doctorsUser.name" class="field doctorsUser-name" id="doctorsName">content</span>
+                            </div>
+                            <div class="information-1-show " style="overflow-y:auto">
+                                <!-- <div class="information-item padding-l16 doctor-information">
+                             <div class="sre">
+                                 <p class="p1">所在医院:</p>
+                                 <p class="p2 field" data-field="doctorsUser.hospital"></p>
+                             </div>
+                         </div>-->
+                                <div class="information-item doctor-information padding-l16">
+                                    <div class="sre">
+                                        <p class="p1">所在科室:</p>
+                                        <p class="p2 field" data-field="doctorsUser.department"></p>
+                                    </div>
+                                </div>
+
+                                <div class="information-item doctor-information padding-l16">
+                                    <div class="sre ">
+                                        <p class="p1">所属医生团队:</p>
+                                        <p class="p2  field" data-field="doctorsLeaderTeam.name"></p>
+                                    </div>
+                                </div>
+                                <div class="information-item doctor-information padding-l16">
+                                    <div class="sre ">
+                                        <p class="p1">擅长:</p>
+                                        <p class="p2  field" data-field="doctorsUser.introduction"></p>
+                                    </div>
+                                </div>
+                                <div class="information-item doctor-information padding-l16">
+                                    <div class="sre ">
+                                        <p class="p1">联系电话:</p>
+                                        <p class="p2 field" data-field="doctorsUser.phone"></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="information-2 hidden">
+                            <div class="title caozuo">
+                                <span>常用操作</span>
+                            </div>
+                            <ul class="operation scrollbar">
+                                <li>
+                                    <div>
+                                        <i class=" icon-th-list"></i>
+                                        <p>转交医生处理</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <i class=" icon-th-list"></i>
+                                        <p>转交医生处理</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <i class=" icon-th-list"></i>
+                                        <p>转交医生处理</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <i class=" icon-th-list"></i>
+                                        <p>转交医生处理</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="information-3 hidden">
+                            <div class="title caozuo">
+                                <span>常用语</span>
+                                <span class="color-blue">添加</span>
+                            </div>
+                            <div class="padding-l16 scrollbar">
+                                <div class="item">额热很热哦副科级和哦I好人</div>
+                                <div class="item">额热很热哦副科级和哦I好人</div>
+                                <div class="item">额热很热哦副科级和哦I好人</div>
+                                <div class="item">额热很热哦副科级和哦I好人</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taking">
+
+                <div>
+                    <i class="img icon-comment"></i>
+                    <p style="color:#ccc;font-size:17px;text-align:center">未选中聊天 <span></span></p>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="model" style="position:fixed;top:0;bottom:0;left:0 ;right:0;background:rgba(135, 136, 137, 0.670588);z-index:99;display:none">
+    </div>
+
+   
+
+    <div class="model-warpall" style="">
+        <div class="model-image">111</div>
+    </div>
+    <div class="template" style="display:none">
+        <audio controls="controls" style="display:none">
+            <source src="audio/message.mp3" type="audio/mpeg" />
+        </audio>
+
+          
+        <!--<div class="chat-item chat-room">
+            <div class="user-img le">
+                <img src="images/people.jpg" alt="">
+            </div>
+            <div class="item-show le">
+                <p data-field="chatroomName" class="field">谢玉成</p>
+                <div>胸外科</div>
+                <div>谢谢</div>
+            </div>
+        </div>-->
+
+        <div class="chat-item chat-room">
+            <div class="user-img">
+                <span class="message-num" style="display:none"></span>
+                <img src="" data-field="doctorsUser.headUrl" class="field" alt="">
+                <span class="vip">Vip1</span>
+            </div>
+            <div class="item-show">
+                <p><span data-field="doctorsUser.name" class="field "></span><em>医生</em></p>
+
+                <div data-field="doctorsPhone" class="field"></div>
+                <div class=" field" data-field="doctorsUser.department"></div>
+            </div>
+        </div>
+
+        <div class="answer-question ss me">
+            
+            <img data-field="logourl" alt="" class="img field">
+           
+            <p>
+     
+                <span data-field="content" class="field">
+                </span>
+            </p>
+        </div>
+
+        <div class="ask-question ss you">
+            <img data-field="logourl" src="" alt="" class="img field">
+            <p>
+               
+                <span id="content" data-field="content" class="field">
+                </span>
+            </p>
+        </div>
+        <div class="chat-content-show-area" style="display:block">
+            <div class="title">
+                <span class="doctor field" data-field="patientName"></span>
+                <p class="doctorsUser">责任医生:<span class="field " data-field="doctorsUser.name">李福军</span></p>
+            </div>
+            <div class="take-content" style="overflow-y:auto">
+                <div class="take-content-area ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none">
+        <form id="file-uploader" enctype="multipart/form-data">
+            <input type="file" name="image" id="image-file" />
+        </form>
+    </div>
+    <script src="js/emoji.js"></script>
+    <script type="text/javascript">
+        using('js/huanxin.js');
+        using('js/im/webim.config.js');
+        using('js/im/strophe-1.2.8.min.js');
+        using('js/im/websdk-1.4.10.js');
+        var theIMClient = null;
+        var messageBuffer = {};
+        var theHistoryTime = {};
+        function loadMeChatData(data) {
+            var theEData = EquipmentData.Get();
+            var headUrl = theEData.headUrl
+            data.logourl = data.logourl || headUrl;
+            var theTempate = $('.template .me');   
+            var theCloneTemplate = $(theTempate).clone();
+            updateField(theCloneTemplate, data);
+            var theTimeStr = getTime(data.messageTime);
+            var theLastTimeStr = theHistoryTime[data.to];
+            if (theLastTimeStr != theTimeStr) {
+                theHistoryTime[data.to] = theTimeStr;
+                showtime(theTimeStr);
+            }
+            $('.chat-content-show-area_current .take-content-area').append(theCloneTemplate);
+            scrollbottom()
+         
+        }
+        function loadYouChatData(data) {
+            var theTempate = $('.template .you');
+            var theCloneTemplate = $(theTempate).clone();
+            updateField(theCloneTemplate, data);
+            var theTimeStr = getTime(data.messageTime);
+            var theLastTimeStr = theHistoryTime[data.to];
+            if (theLastTimeStr != theTimeStr) {
+                theHistoryTime[data.to] = theTimeStr;
+                showtime(theTimeStr);
+            }
+            $('.chat-content-show-area_current .take-content-area').append(theCloneTemplate);
+            scrollbottom()
+    
+
+        }
+
+        function loadChatData(msg) {
+
+            var theEData = EquipmentData.Get();
+            if (!msg.from||msg.from == theEData.loginId) {
+                loadMeChatData(msg);
+            }
+            else {
+                loadYouChatData(msg);
+            }
+        }
+
+        function loadBufferChatData(chatId) {
+            if (messageBuffer && messageBuffer[chatId]) {
+                var theChatMsgList = messageBuffer[chatId];
+                for (var i = 0; i < theChatMsgList.length; i++) {
+                    loadChatData(theChatMsgList[i]);
+                }
+            }
+        }
+        function updateChatRoomNum(){
+         
+            for (var key in messageBuffer) {
+                var theLength = messageBuffer[key].length;
+                var theUnReadNum = 0;
+                for (var i = 0; i < messageBuffer[key].length; i++) {
+                    var theItem = messageBuffer[key][i];
+                    if (!theItem.read) {
+                        theUnReadNum += 1;
+                    }
+                } 
+                if (theLength > 0) {
+                    var theCharRoomSelect = $('#' + key);
+                    if (theUnReadNum > 0) {
+                        $(theCharRoomSelect).find('.message-num').text(theUnReadNum);
+                        $(theCharRoomSelect).find('.message-num').show();
+                        $(theCharRoomSelect).find('.message-num').addClass("num");
+                      
+                    }
+                }
+            }
+        }
+        function getCurrentChatRoomData() {
+
+            var theRoomData = $('.chat-content-show-area_current').data('data');
+            return theRoomData;
+        }
+
+
+        function swithChatroom(roomId){
+            var theCharRoomSelect = $('#' + roomId);
+            var theRoomData = $('#' + roomId).data('data');
+            debugger
+            theIMClient.getDoctorMessage(theRoomData.doctorsLoginId, function (data) {
+                if (data.code == 200) {
+                    updateField('.information-1', data.data)
+                }
+            })
+            console.log(theRoomData)
+            $(theCharRoomSelect).find('.message-num').hide();
+          
+            var theTemplate = $('.template .chat-content-show-area');
+            $('.chat-content-show-area').removeClass('chat-content-show-area_current').hide();
+            if ($('#' + roomId + "_view").length <= 0) {
+                var theNewTemplate = $(theTemplate).clone();
+                updateField(theNewTemplate, theRoomData);
+
+                $(theNewTemplate).attr('id', roomId + "_view");
+                $(theNewTemplate).data('data', theRoomData);
+                $('.chat_content_view').append(theNewTemplate);
+            }
+            $('#' + roomId + "_view").addClass('chat-content-show-area_current').show();
+
+            loadBufferChatData(roomId);
+            theIMClient.updateHistoryItemState("YSFW", roomId);
+            if (messageBuffer[roomId]) {
+
+                messageBuffer[roomId].length = 0;
+            }
+        }
+        //排序
+        function sortChatroom(roomId) {
+            $('.chat-nav-list').prepend($('#' + roomId));
+        }
+        //聊天滚动
+        function scrollbottom() {
+        
+      
+            var height = $(".chat-content-show-area_current .take-content-area ").height()
+
+            $(".chat-content-show-area_current .take-content").scrollTop(height)
+
+        }
+
+        $('.chat-nav-list').on('click', '.chat-item', function () {
+           debugger
+            if ($(this).hasClass('.chat-item')) {
+                return;
+            }
+            $(".taking").hide(0)
+            $(".warp3-right").show(0)
+      
+            $(this).find(".message-num").hide()
+            if ($(this).find(".message-num").hasClass("num")) {
+              
+                $(this).find('.message-num').removeClass("num");
+                var len = $(".message-num.num").length
+                $(".message-num.num").eq(len - 1).closest(".chat-item").after($(this))
+
+            }
+          
+
+            $('.chat-item').removeClass("active");
+            $(this).addClass("active");
+            var theRoomData = $(this).data('data');
+
+            swithChatroom(theRoomData.doctorsLoginId);
+            theIMClient.updateHistoryItemState("YSFW", theRoomData.doctorsLoginId);
+            sessionStorage.setItem("current2", theRoomData.doctorsLoginId)
+        });
+
+        $(".operation li").click(function () {
+            var theRoomData = getCurrentChatRoomData();
+            if (theRoomData) {
+                var data = $(this).find("div").attr("data");
+                $("iframe").css("display", "block")
+                $("iframe").attr("src", data + "?chatRoomData=" + escape(JSON.stringify(theRoomData)))
+               
+            }
+            else {
+               
+                // alert("请选择患者！");
+                layer.msg("请选择患者！");
+            }
+        })
+        $(function () {
+            theIMClient = new MessageClient("YSFW");
+            var theEData = EquipmentData.Get();
+
+            console.log(theEData)
+         
+            theIMClient.listen(
+                {
+                    onMessage: function (msg) {
+                       
+                        if(msg.from&&msg.from.indexOf('doctor_')>=0)
+                        {
+                            msg.chatId = msg.from;
+                        }
+                        else {
+                            msg.chatId = msg.to;
+                        }
+                        
+
+                        var theRoomData = $('.chat-content-show-area_current').data('data');
+                        if (!theRoomData) {
+                            var curentRoomId = 1;
+                        } else {
+                            var curentRoomId = theRoomData.doctorsLoginId;
+                        }
+                       
+                        sortChatroom(msg.chatId);
+                        if (msg.chatId != curentRoomId) {
+                            messageBuffer[msg.chatId] = messageBuffer[msg.chatId] || [];
+                            messageBuffer[msg.chatId].push(msg);
+                            updateChatRoomNum();
+                            return;
+                        }
+                    
+                       
+                        if (!msg.from||msg.from == theEData.loginId) {
+                            //自己不管自己的
+                            loadMeChatData(msg);
+                            return;
+                        }
+                     
+                        loadYouChatData(msg);
+                        setTimeout(function () {
+                            theIMClient.updateHistoryItemState("YSFW", msg.chatId);
+                        }, 100);
+                      
+                    }
+                }
+                );
+          
+
+            updateField($('.user-title'), theEData);
+            theIMClient.login(theEData.loginId, theEData.password);
+
+            theIMClient.getDoctorList(theEData.phone, function (data) {
+             debugger
+                if (data.code == 200) {
+                    var theRoomList = data.data.secretaryDoctorsLinkList;
+                    $('.chat-nav-list').empty();
+                    var templateItem = $('.template .chat-room');
+                    for (var i = 0; i < theRoomList.length; i++) {
+                        var theRoom = theRoomList[i];
+                        var theRoomView = $(templateItem).clone();
+                        updateField(theRoomView, theRoom);
+                        $(theRoomView).data('data', theRoom);
+                        $(theRoomView).attr('id', theRoom.doctorsLoginId);
+                        $('.chat-nav-list').append(theRoomView);
+                    }
+                    var current = sessionStorage.getItem("current2")
+                    setTimeout(function () {
+                        if (!current) {
+                           
+                        } else {
+                            $("#" + current).click();
+                           
+                        }
+                    }, 300)
+                
+                  
+                }
+                else {
+                    //alert(data.message);
+                   
+                    layer.msg(data.message)
+                }
+                
+            });
+
+
+            $(document.body).on('click', '.chat-image', function () {
+
+                $(".model").fadeIn();
+                $(".model-warpall").delay(1000).addClass("on")
+                $(".model-warpall").find('div').empty().append('<img style="max-width:100%;max-height:100%" src="' + $(this).attr('src') + '"/>');
+                $(".model-warpall").unbind().click(function () {
+                    $(".model").fadeOut();
+                    $(".model-warpall").removeClass("on");
+                });
+            });
+            $('.image-send').click(function (){
+                $('#image-file').unbind();
+                $('#image-file').change(function () {
+
+                    var msg = new MessageItem();
+                    msg.messageType = MessageTypes.CHAT_IMG;
+                    if ($('.chat-content-show-area_current').length <= 0) {
+                       // alert('请选择医生!');
+                      
+                        layer.msg('请选择医生!')
+                        return;
+                    }
+                    var theRoomData = $('.chat-content-show-area_current').data('data');
+                    msg.to = theRoomData.doctorsLoginId;//"16365554565123";// "sjian2017";
+                    msg.content = "image-file";
+                    msg.callback = function (data) {
+                        debugger;
+                      
+                    
+
+                        $('#image-file').unbind();
+                        $('#image-file').val('');
+                        if (data.code == 200) {
+                            msg.content = "<img class='chat-image' src='" + data.data.msgContentStr + "'/>";
+                            theIMClient.addHistoryItem("YSFW", msg);
+                            loadMeChatData(msg);
+                            $('.srcollbar').val("");
+                        }
+                        else {
+                            msg.content = "<img class='chat-image' src='" + data.data.msgContentStr + "'/><i class='icon-warning-sign' style='font-size:24px;position:absolute;top:35%;left:40%;color:red;'></i>";
+                            theIMClient.addHistoryItem("YSFW", msg);
+                            loadMeChatData(msg);
+                        }
+                    }
+                    debugger;
+                    theIMClient.send(msg);
+                });
+                $('#image-file')[0].click();
+            });
+            $('.take-send').click(function () {
+       
+                var text = $('.srcollbar').val();
+                if ($.trim(text) == '') {
+                    return
+                }
+                var msg = new MessageItem();
+                msg.messageType = MessageTypes.CHAT_TEXT;
+                if ($('.chat-content-show-area_current').length <= 0) {
+                   // alert('请选择医生!');
+                   
+                    layer.msg('请选择医生!')
+                    return;
+                }
+                var theRoomData = $('.chat-content-show-area_current').data('data');
+                msg.to = theRoomData.doctorsLoginId;//"16365554565123";// "sjian2017";
+                msg.content = text;
+                msg.callback = function (data) {
+                    if (data.code == 200) {
+                        msg.content = theIMClient.handleEmoji(msg.content);                        
+                        msg.read = true;
+                        theIMClient.addHistoryItem("YSFW", msg);
+                        loadMeChatData(msg);
+                        sortChatroom(msg.to);
+                        $('.srcollbar').val("");
+                        
+                    }
+                    else {
+                       
+                    }
+                }
+                theIMClient.send(msg);
+               
+               
+            });
+
+          $("textarea.srcollbar").keydown(function (e) {
+                var event = e || window.event;
+                if (event.keyCode == 13) {
+                    event.stopPropagation();
+                    event.preventDefault();
+                    $(".take-send").click()
+                }
+            })
+
+            //延迟加载空白部分
+            setTimeout(function () {
+                $(".taking").css("display","block")
+            }, 900)
+            //切换
+            var siblings = $(".header-nav li.active").siblings();
+            for (var i = 0; i < siblings.length; i++) {
+                siblings[i].onclick = function () {
+                    sessionStorage.setItem("current2", '');
+                }
+            }
+
+        })
+        $("body").on("mouseenter", '.scrollbar', function () {
+            $(this).addClass("active")
+        }).on("mouseleave", '.scrollbar', function () {
+
+            $(this).removeClass("active")
+        })
+     
+        function timePush(ele) {
+            debugger
+
+            var audio = $(ele).find("audio")[0];
+            var t = audio.duration;
+            alert(0)
+            $(ele).find(".time").html(Math.ceil(t))
+        }
+    
+
+        //时间显示
+        function showtime(timeStr) {
+            $(".chat-content-show-area_current .take-content-area").append("<div class='lastTime' style='font-size:14px;color:#aaa;text-align:center;margin:5px 0'>" + timeStr + "</div>");
+
+        }
+
+    </script>
+</body>
+</html>

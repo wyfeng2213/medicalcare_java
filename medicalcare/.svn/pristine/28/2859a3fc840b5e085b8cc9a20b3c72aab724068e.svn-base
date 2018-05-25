@@ -1,0 +1,15 @@
+{
+  "data": {
+    "address": "广州",
+    "company": "诚迈",
+    "mobile": "13928980514",
+    "name": "罗亦洲",
+    "prikey": "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKn2fPAZkty+e529Sook5xMLqyNCpzvR6zphltx43PsbQEwA7MWxqTcAnjwj+f+EKwMrDbPLjBvK8YS33Ik5Cweg0amUO4rn32pPV1yzqZQksLBxGoCB6Zx/F12ADkUTrckEofIRbe3aPux4jKa1VWqpl5rrMOwFRgMFMKCQVaFRAgMBAAECgYEAmR+9CAPCUKY8cKytjzAYDwygLrBKQpapOnvZkuBBFupCTzc2GhYpwagI513yScYlikEroyRrIk8AsPWE9wwxZj8fvEVkCnoRLKwWADw/pmBvW/FibolXw0L0kLP+QAubfHWaHfcWlK7P2v8ejw6O0R5dYzjGjWHb56i6/Z03BQECQQDsn/JC+kLxZjPmpbFg4okajx1r+Ha2YlDo9eHO2/E35wnUOWdZACMBY9Tm6KFElAgfKv+bCmJG8BdHUSONSOx5AkEAt+Ex9lMGCGzM5/ICpybVn23zg2WkQLSF7xECQQtA7eJtDEWQG98LC3pK/s7iOrTdW9SAcHzPZCV+HSTZo9V1mQJAHHVYI6oJpxLNpy3CWY6lQqZ3uWaWkHTemkYINGLLbhfBXN7SiSe1DhO9pU/RJXhQSb9YIoNrMnDpu9AMYI+msQJAIAh6JLhX77XMiIevkKECTBDigDx/vcn1Hy2uX9hvCkIMzzt7HG/hw7EdSYCPBr0lZu8BJReJJaAmdTtLMvBn2QJAOTWPP9jAqMk4TsMs0yAQOfHMe56sp7Kk13BJuVeEvYY7xN+74Xc3n1W2dgLExBQQP7Srz9D2lbOT4Q/wqFvjlw==",
+    "pubkey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCp9nzwGZLcvnudvUqKJOcTC6sjQqc70es6YZbceNz7G0BMAOzFsak3AJ48I/n/hCsDKw2zy4wbyvGEt9yJOQsHoNGplDuK599qT1dcs6mUJLCwcRqAgemcfxddgA5FE63JBKHyEW3t2j7seIymtVVqqZea6zDsBUYDBTCgkFWhUQIDAQAB",
+    "appKey": "key0ed3d9decd94486e82cfa5a07e337e63",
+    "appid":"wx5e9c9df0ee8817a4"
+    "userid": "U5a587b180689f30c87a64bd8"
+  },
+  "message": "创建用户成功",
+  "status": 200
+}

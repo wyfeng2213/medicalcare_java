@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>精准医疗扶贫</title>
+
+<style>
+	*{margin:0 ;padding:0}
+	.containe{line-height: 1.5;padding:10px}
+	h3,h5{text-align:center;margin:10px 0}
+	.img-area{text-align:center}
+	.img-area img{width:150px;height:150px}
+	.text-area p{text-indent:2em;margin-bottom:4px;font-size:14px}
+	.text{color:#666}
+</style>
+</head>
+
+<body>
+<div class="containe">
+	<div>
+		<h3 class=title>
+		  	<p>精准医疗扶贫，免费下乡义诊</p>
+			<p>粤健康党员突击队助农送关怀活动</p>
+		</h3>
+		<div class="text-area">
+			<p class="text">
+				为贯彻落实十八届五中全会提出要积极应对人口老龄化，促进医疗卫生和养老服务相结合，8月25日，广东移动数研中心“粤健康”党员突击队到湛江乾塘镇沙城村组织医疗下乡活动，
+			            对贫困户进行走访慰问，举办粤健康义诊活动，在解决困难群众看病难的同时，探索了医疗扶贫新模式，进一步推动了广东移动扶贫工作的开展。
+		    </p>
+		</div>
+		<section>
+			<div class="img-area">
+				<img src="img/0.png" alt="" />
+				<img src="img/1.png" alt="" />
+				<h5>图一：沙城村交通不便，当地村民以种植莲藕为主</h5>
+			</div>
+			<div class="text-area">
+				<p class="text">
+					湛江乾塘镇沙城村距离湛江市区30公里，东、南面海，是广东移动定点帮扶的省定贫困村。沙城村下辖21条自然村，总户数1534户，总人口5775人，贫困户数109户，贫困人口数311人，占全村总人口比例5.4%。
+					针对沙城村贫困户中大多数都是行动不方便的老人，广东移动“粤健康”团队特地制定了分级诊疗、医疗结合的方案，后续将在项目推广时把沙城村纳入试点范围，重点帮扶。
+			    </p>
+			    <p class="text">
+			    	25日上午，粤健康党员突击队与沙城村村委、广东移动驻村干部一起，在沙城村召开了扶贫工作座谈会，对沙城村目前的扶贫进展情况做详细了解，同时针对粤健康如何在沙城村更好发挥助农作用进行了深入探讨。
+			    	粤健康将利用自身专业技术优势，与合作医院一起，搭起分级诊疗的架子、戴上健康扶贫的帽子、走好精准扶贫的路子，切实把分级诊疗、健康扶贫和精准帮扶有机结合、同步推进，让老乡实现真正脱贫。与此同时，
+			    	粤健康团队的专家在村委会办公室为村民们召开了科普讲座，宣讲癌症疾病的预防和健康知识，并组织医疗服务专家为沙城村村民进行体检，开展义诊活动。义诊吸引了众多前来看病的群众，
+			    	专家医生细心接待每一位患者，详细了解病情，发放药物，并耐心地指导群众服药方法及注意事项。沙城村村委书记表示，“非常高兴也非常感谢广东移动粤健康团队到沙城村组织义诊活动，
+			    	这次活动切实解决部分群众的困难问题，对贫困群众脱贫起到很好的帮助作用。希望类似的活动能多些开展，让更多的群众受惠。”
+			    </p>
+			</div>
+		</section>
+		
+		<section>
+			<div class="img-area">
+				<img src="img/2.png" alt="" />
+				<img src="img/3.png" alt="" />
+				<h5>图二：粤健康科普讲座及义诊活动</h5>
+			</div>
+			<div class="text-area">
+				<p class="text">
+					随后，粤健康党员突击队向沙城村109户贫困群众捐赠了大米、油和医疗设备等物资，并实地走访慰问了数家贫困户，与贫困群众进行深入交流，切实了解当地贫困现状以及基层群众需求，力求在今后更好地提升扶贫工作。
+			   </p>
+			</div>
+		</section>
+		<section>
+			<div class="img-area">
+				<img src="img/4.png" alt="" />
+				<img src="img/5.png" alt="" />
+				<h5>图三：党员突击队向贫困户捐赠生活必需品并在当地进行实地走访慰问</h5>
+			</div>
+			<div class="text-area">
+				<p class="text">
+					广东移动数研中心粤健康党员突击队组织的医疗下乡活动是密切党群关系、服务基层群众的具体实践。今后，广东移动粤健康团队将继续真抓实干，扎扎实实地用具体行动落实好各项帮扶工作计划，更好地为群众办好事，办实事。
+			   </p>
+			</div>
+		</section>
+		
+	</div>
+	
+          
+          
+</div>         
+</body>
+</html>

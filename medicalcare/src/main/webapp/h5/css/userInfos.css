@@ -1,0 +1,84 @@
+.list-user-info{
+	padding: 0 0 0 0.22rem;
+	background: #fff;
+}
+.icon-user{
+	display: inline-block;
+	float: right;
+	height: 100%;
+	width:50%;
+	text-align: right;
+}
+.icon-user img{
+	border-radius: 50%;
+	width:0.47rem;
+	height: 0.47rem;
+}
+
+.form-user-infos li,.form-user-infos .user-info{
+	height: 0.66rem;
+	line-height: 0.66rem;
+	border-bottom:0.01rem solid #f0f4f9;
+	padding: 0 0.18rem 0 0;
+}
+.form-user-infos label{
+	display: inline-block;
+	width: 0.65rem;
+	height: 100%;
+}
+.form-user-infos a{
+	display: inline-block;
+	float: right;
+	width: 2.6rem;
+	height: 100%;
+}
+.form-user-infos a>input{
+	display: block;
+	height: 100%;
+	margin:0;
+	padding:0;
+	text-align: right;
+	border:0;
+}
+.form-user-infos input{
+	display: inline-block;
+	float: right;
+	width: 2.6rem;
+	height: 100%;
+	line-height: 0.66rem;
+	margin:0;
+	padding:0;
+	text-align: right;
+	border:0;
+}
+.tips{
+	font-size:0.13rem;
+	line-height: 0.18rem;
+	padding: 0 0 0 0.22rem;
+}
+
+.form-user-infos .user-info{
+	background: #fff;
+	margin-bottom: 0.08rem;
+	padding: 0 0.18rem 0 0.22rem;
+}
+.form-user-infos li.user-info{
+	margin-bottom: 0.01rem;
+}
+.form-user-infos li.hidden{
+	display: none;
+}
+.form-user-infos .mb-8{
+	margin-bottom: 0.08rem;
+}
+.btn-apply{
+	display: block;
+	margin: 0.6rem auto 0;
+	background: #358bf7;
+	color: #fff;
+	line-height: inherit;
+	font-size: 0.18rem;
+}
+#form-userIcon{
+	visibility: hidden;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+		<link rel="stylesheet" href="../../Content/css/reset.css">
+	<link rel="stylesheet" href="../../Content/css/main_1.css">
+</head>
+<body>
+	<div id="height_32">
+		<div class="width">
+			添加问诊记录
+			<span>X</span>
+		</div>
+	</div>
+	<div class="form_2">
+		<form action="" enctype="multipart/form-data">
+			<div class="form-2-list">
+				<span class="le"> 患者:</span>
+				<span class="ri">2017-1-30</span>
+			</div>
+			<div class="form-2-list">
+				<h2 class="left">问诊记录:</h2>
+				<textarea cols=40 rows=4>欢迎光临猴子也能看懂的网页制作入门
+                </textarea>
+			</div>
+			<div class="form-2-list">
+				<h2 class="left">附件:</h2>
+				<input type="file">
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>
